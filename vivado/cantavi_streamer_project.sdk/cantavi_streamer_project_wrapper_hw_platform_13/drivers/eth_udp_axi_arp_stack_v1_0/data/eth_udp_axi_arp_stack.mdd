@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER eth_udp_axi_arp_stack
+	OPTION supported_peripherals = (eth_udp_axi_arp_stack);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = eth_udp_axi_arp_stack;
+END DRIVER

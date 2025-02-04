@@ -1,0 +1,7 @@
+16:34:00 **** Build of configuration Default for project CantaviStreamerApp8 ****
+make all 
+Makefile:1: build.mak: No such file or directory
+make: *** No rule to make target 'build.mak'.  Stop.
+
+16:34:00 Build Finished (took 212ms)
+

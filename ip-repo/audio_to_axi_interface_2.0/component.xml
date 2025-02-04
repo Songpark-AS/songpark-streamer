@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>me</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>audio_to_axi_interface</spirit:name>
+  <spirit:version>2.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">16</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s00_axi_aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s00_axi_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_ACLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>audio_to_axi_interface_v2_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c9d52b54</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+        <spirit:displayName>VHDL Simulation</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>audio_to_axi_interface_v2_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c9d52b54</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>fc4fc311</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>fd592ead</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>45a2f450</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>line_in_l_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>line_in_r_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>newsample_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>irq_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_48</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>CLK_100</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">6</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/DualClockFIFO.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/GrayCounter.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/audio_to_axi_interface_v2_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/audio_to_axi_interface_v2_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_d11f00dd</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/DualClockFIFO.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/GrayCounter.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/audio_to_axi_interface_v2_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/audio_to_axi_interface_v2_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/audio_to_axi_interface_v2_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_fd592ead</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Audio Controller</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">6</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">audio_to_axi_interface_v2_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>audio_to_axi_interface_v2.0</xilinx:displayName>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-03-08T18:19:08Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="me:user:audio_to_axi_interface:2.0_ARCHIVE_LOCATION">../ip_repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34099854_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18680e5d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20f7ab5e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1410b50e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f36e1eb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2567561f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4863f5f0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa1e7c5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a8d32c4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6226f2f7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32dbdf6a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac278e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7387266a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7baabfc0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b78b8f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76cfb3b3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e4fb667_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23dac53c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7929cefc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b1d6d2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50f82caa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b69edc1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43e5c69b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2343fc94_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bea348b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c0db3c3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461982fe_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dc0d001_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2406eb5a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@adcfd00_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b116da0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b07f95d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e8727bd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233145ec_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24783a74_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c56ea40_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6551142b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75dc11ce_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cc7e89d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@605d1e7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62368772_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4d368e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31be1a1c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b7c78fc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b95e06_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cfafc0b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@347be93d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@123c82f8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48604bd7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c049609_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76977af_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30455173_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203132a4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aa72507_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d1eb8d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ebd6753_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd689cd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ccdfbea_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d06ddbd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2986d711_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3edade57_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41238d66_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e0cf84_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57117f91_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b558c73_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1166535e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed63e9d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e77d939_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24168536_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d941eb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27db1dd4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5b34cd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75ffc4f0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3abd4c0a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70835204_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63342e74_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33615901_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e8d0891_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af9bf83_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4adac72b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@653dea38_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@310dbe14_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e0d3b70_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6f1522_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3313c0e3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f196ace_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4993f81e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d47c19b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a0719e6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48c0a4e9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70342c38_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4801fd9e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d7c1c8b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c1b3d49_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da3de65_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21512ae_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3892da82_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aa8d261_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f1531aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c1e2454_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75dd02bf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@573c0679_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc054c5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b301a04_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d401a43_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67079ef0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71f12788_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38562b58_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b69f39_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56c3e41e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364359a4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c84877_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2880a558_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d10532d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6568760d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74051ed1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67eb69b8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa3a30_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7868da59_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61261887_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68592a69_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2499fb81_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d4c541c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ef1c36_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227d9131_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dc3bba7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f9c7a28_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ea1f45a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a60682d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c014f7d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d74aa13_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab658d2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a37b64_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fd72f96_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4e8305_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a92f843_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8251626_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e0b8f17_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34993ed1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9053768_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43691128_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36df0555_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fef16a7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79b845da_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7a2e5b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64301470_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d106550_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61f23cd8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40bf5375_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@131658bb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a985b37_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b441fc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44dbbde2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d69928c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f2d00af_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47f74d50_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ec17c8a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5319c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13dc1ef4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e194475_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1509e60c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6562b00a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50f0003e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dee77d0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38fe9fee_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@527c7c2c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c0a855a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f1803ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@572cd785_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@315b853d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2849d603_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a7f6839_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6922dcf1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@421a4ed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26baac9d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6456fd0c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d50187_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cb68f0b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@154051bd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@651a99f1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fd272bd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45bb7b8d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ad1efa1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6294a5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ffd3787_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@775050c1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d6adb87_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@305f6fe0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40a11386_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427e8d26_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14db58e7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70076fb5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7530caf1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a70b01b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65cde223_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31c8177f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53361c43_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69dae476_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b909d70_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9cccef5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512f9fd4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28a31aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ec599a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385f627b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a79bc5a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef24c77_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15dae441_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@570c8798_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22208e6a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54ebcbe3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bd98d55_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c8d4ef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ceead9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@751f2cac_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22cbdf7d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6178b3c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15aa5807_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2830db04_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45f5fc54_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a26a4c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26239c61_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab4b4e4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c47c586_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24063337_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f02dea4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@490ebe2c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d3ea85e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df6bda9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf77a77_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@431e69d7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18b9ce18_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ed29fd7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48db1b1a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64f8e93e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61da4db1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fa4a71d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b3f934_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41ac0cd6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36bd585f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6724b411_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f2154ea_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20fe212b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dda5550_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bf3ffd1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@768af07_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@180f3051_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86c437c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fd69921_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18e61076_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b858d6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d45aaef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d60107e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18904812_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec9206b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33597cb2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eb988e8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72320aa5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68a77da1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aea3d65_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d6d8a26_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c031b62_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6426b216_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e461c39_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39aa1725_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24c8480a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@181eed35_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5339ce9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3366552b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d4e7e2c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c847c9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c6175d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427b01aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@443153ab_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ba73848_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35521943_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fc8c49a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5daf7080_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fdddf82_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2712fe64_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfb3152_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4013d4e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ec2c1b4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a870bf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37f36991_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@136af1b1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e57ba8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb1b4a9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1358c1f1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28fc4fe3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33cccc2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d96375a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47b1516e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6604b72f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c012a19_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@138a7742_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c5034_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38548fdf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e679f53_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e64aea2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51bbf42d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d82c73c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354fa86_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@634fe704_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ddc7c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2927dcc2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e63344_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@543e35f9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fa4a9b6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3514c1a7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b658702_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fd65f94_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f738bd5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677011ab_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b4cfdc1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69180a88_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@511c7142_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1591fdef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a332463_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a190119_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18422474_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c382c4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e96a802_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/audio_to_axi_interface_2.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3523db1b"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0ff9628d"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="deb70b8d"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e7b50784"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="adac6d3f"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

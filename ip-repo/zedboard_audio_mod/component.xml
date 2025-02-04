@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>zed_audio</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>sample_clk_48k</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>INTERRUPT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sample_clk_48k</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>SENSITIVITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SAMPLE_CLK_48K.SENSITIVITY" spirit:choiceRef="choice_list_99a1d2b9">LEVEL_HIGH</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>audio_top</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>5da7a44e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>audio_top</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>5da7a44e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f92e9879</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk_100</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_ADR0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_ADR1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_GPIO0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_GPIO1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_GPIO2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_GPIO3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>hphone_l</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>hphone_l_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>hphone_r</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>hphone_r_valid_dummy</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>line_in_l</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>line_in_r</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>new_sample</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sample_clk_48k</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_48_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_MCLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_SCK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AC_SDA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_99a1d2b9</spirit:name>
+      <spirit:enumeration>LEVEL_HIGH</spirit:enumeration>
+      <spirit:enumeration>LEVEL_LOW</spirit:enumeration>
+      <spirit:enumeration>EDGE_RISING</spirit:enumeration>
+      <spirit:enumeration>EDGE_FALLING</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/ADAU1761_interface.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/adau1761_configuraiton_data.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/adau1761_izedboard.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/clocking.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/i2c.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/i2s_data_interface.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/i3c2.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/audio_top.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_d4e748c9</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/ADAU1761_interface.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/adau1761_configuraiton_data.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/adau1761_izedboard.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/clocking.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/i2c.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/i2s_data_interface.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/i3c2.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/audio_top.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/zed_audio_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>zed_audio_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">zed_audio_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>zed_audio_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>15</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>user.org:user:audio_testbench:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2019-02-27T12:36:16Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="nopcore"/>
+        <xilinx:tag xilinx:name="user.org:user:audio_testbench:1.0_ARCHIVE_LOCATION">/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="user.org:user:zed_audio:1.0_ARCHIVE_LOCATION">/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eda1bb3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5976e4aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35100759_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ee27e6f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b01f695_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b890d19_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2f06c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d74482_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b01f8be_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3db2af37_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c80a81c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eef16e3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce28920_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@110c6a7f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52638d85_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c56048b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d515f9f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c3bba_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca40218_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab2c110_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72392eec_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@408f86a4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a4592ec_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe42a30_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f0a7d61_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ec0d489_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5369c74_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39111b01_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@588c100c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a3d141_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9875816_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dd50e1d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@420736e6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cdbf97e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d704fa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1301de76_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54f2e22b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58a65910_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f46c83_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1693f748_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e5c961_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4108800_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6593f9f5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1768eae7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c2c45d2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cba3e6c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53962b70_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad667ec_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4910c180_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f4b029f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a793cd9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40f97333_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8a26093_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d24a4bd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3942376f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ae76966_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@582267e7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b0b66b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3619d182_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bebfef7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@443729e0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@557655b0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6005494d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@244c210b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb78de3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fd72564_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20dc3691_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f2e340e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23465221_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32e0353f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b48fb2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53807ea1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49b84ed4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@475be3c8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10322343_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b9ef324_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1735371e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@546836c4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@339af758_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@622aa075_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4daf999c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2d9848_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a11abe6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216f5190_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@472dc44e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba47ed7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65fb665f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32063b65_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c72b48_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@204827e7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fd2127c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@499f1945_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427b6bd9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@243b22ee_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ff53182_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c5865bb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29d8954d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37c9967e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75de8025_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11283cd3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75fe32e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361bcc69_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e46ee96_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a247a8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d31c0c7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5492c0a2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67c37f5d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b40e357_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4e1df_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fddfd9d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b43d8cd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27419a6a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8255162_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d591266_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42aef27_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60195440_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18a9590a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad931d6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d2e073_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4418f996_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b3a054f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78389076_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@698e2016_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@544d0e74_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1137cfe9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@537c95fe_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aaeee62_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@774ca9ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b6c184f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@111b62e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@270c9d68_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eadda67_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a806ca0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c653981_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9580387_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d1940dc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60c82a91_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2245f0a2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b7b9f82_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@749a46cb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd6e72d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10e920cf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@562a217f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f9db70_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ed5d353_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5af125b9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16a3b46d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d42e41_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76c74dcf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4012dffd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ca97cbb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c9e416_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb4b064_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7099422f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21964ce2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f8db4f2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e1ab7f7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c4ac7ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cd4577_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8848e50_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65e77778_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b0d372b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27762b8e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4986d367_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1783a72b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6432dbe6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32556a5d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eed01e2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@542120c6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34cc9a64_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@136ffb2d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6/ip-repo/zedboard_audio</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f70d5b48"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2e269521"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4f587352"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7a00cbd4"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

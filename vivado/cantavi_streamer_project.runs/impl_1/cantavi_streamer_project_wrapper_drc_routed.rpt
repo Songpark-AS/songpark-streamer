@@ -1,0 +1,930 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Mar 21 23:23:13 2023
+| Host         : JAIRE running 64-bit Arch Linux
+| Command      : report_drc -file cantavi_streamer_project_wrapper_drc_routed.rpt -pb cantavi_streamer_project_wrapper_drc_routed.pb -rpx cantavi_streamer_project_wrapper_drc_routed.rpx
+| Design       : cantavi_streamer_project_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 174
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CHECK-3     | Warning  | Report rule limit reached                                   | 1          |
+| DPOP-1      | Warning  | PREG Output pipelining                                      | 28         |
+| DPOP-2      | Warning  | MREG Output pipelining                                      | 28         |
+| PDRC-153    | Warning  | Gated clock check                                           | 72         |
+| PLCK-12     | Warning  | Clock Placer Checks                                         | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 3          |
+| REQP-1839   | Warning  | RAMB36 async control check                                  | 17         |
+| REQP-1840   | Warning  | RAMB18 async control check                                  | 20         |
+| RTSTAT-10   | Warning  | No routable loads                                           | 1          |
+| REQP-165    | Advisory | writefirst                                                  | 2          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#7 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#8 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#9 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#10 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#11 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#12 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#13 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#14 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#15 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#16 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#17 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#18 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#19 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#20 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#21 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#22 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#23 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#24 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#25 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#26 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#27 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#28 Warning
+PREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9__0 output cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc3__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc5__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc6__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc7__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc8__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#13 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#14 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_left/yacc9__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#15 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#16 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc3__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#17 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#18 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#19 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#20 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc5__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#21 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#22 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc6__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#23 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#24 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc7__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#25 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#26 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc8__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#27 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#28 Warning
+MREG Output pipelining  
+DSP cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9__0 multiplier stage cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/comp_interpolator_odd_right/yacc9__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/Set_Status is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/Status_reg_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/Status_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_ODD_OutDAC/GrayCounter_pWr/Set_Status is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_ODD_OutDAC/GrayCounter_pWr/Status_reg_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_ODD_OutDAC/GrayCounter_pWr/Status_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_RIGHT_EVEN_OutDAC/GrayCounter_pWr/Set_Status is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_RIGHT_EVEN_OutDAC/GrayCounter_pWr/Status_reg_i_1__2/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_RIGHT_EVEN_OutDAC/GrayCounter_pWr/Status_reg_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_RIGHT_ODD_OutDAC/GrayCounter_pRd/Set_Status is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_RIGHT_ODD_OutDAC/GrayCounter_pRd/Status_reg_i_1__1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_RIGHT_ODD_OutDAC/GrayCounter_pRd/Status_reg_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[0]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[10]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[10]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[10]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[11]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[11]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[11]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[12]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[12]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[12]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[1]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[1]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[1]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[2]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[2]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[2]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[3]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[3]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[4]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[4]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[5]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[5]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[6]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[6]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[6]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[7]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[7]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[7]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[8]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[8]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[8]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[9]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[9]_LDC_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/BinaryCountRd_reg[9]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/RdCached0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/RdCached_reg_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_L_OutDAC/RdCached_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[0]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[10]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[11]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[12]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[1]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[2]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[3]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[4]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[5]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[6]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[7]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[8]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[9]_LDC_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/BinaryCountRd_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/RdCached0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/RdCached_reg_i_1__0/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/LIFO_R_OutDAC/RdCached_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/eth_to_audio_interface_v2_0_S00_AXI_inst/RdCachedCaptured1_out is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/eth_to_audio_interface_v2_0_S00_AXI_inst/RdCachedCaptured_reg_i_1/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/eth_to_audio_interface_v2_0_S00_AXI_inst/RdCachedCaptured_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/eth_to_audio_interface_v2_0_S00_AXI_inst/pkt_end_sim_reg[0] is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/eth_to_audio_interface_v2_0_S00_AXI_inst/BinaryCountRdCache_reg[12]_i_2/O, cell cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/eth_to_audio_interface_v2_0_S00_AXI_inst/BinaryCountRdCache_reg[12]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/led_reg[0]_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/led_reg[0]_i_1/O, cell cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/led_reg[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_EVEN_InADC/GrayCounter_pRd/Set_Status is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_EVEN_InADC/GrayCounter_pRd/Status_reg_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_EVEN_InADC/GrayCounter_pRd/Status_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_ODD_InADC/GrayCounter_pRd/Set_Status is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_ODD_InADC/GrayCounter_pRd/Status_reg_i_1__0/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_ODD_InADC/GrayCounter_pRd/Status_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[0]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#39 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[10]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#40 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[11]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#41 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[12]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#42 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[13]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#43 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[14]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#44 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[15]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#45 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[16]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[16]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#46 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[17]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#47 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[18]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#48 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[19]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#49 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[1]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#50 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[20]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[20]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#51 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[21]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[21]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[21]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#52 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[22]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[22]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#53 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[23]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[23]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#54 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[24]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[24]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[24]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#55 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[25]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[25]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#56 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[26]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[26]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#57 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[27]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[27]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[27]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#58 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[28]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[28]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[28]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#59 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[29]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[29]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[29]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#60 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[2]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#61 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[30]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[30]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[30]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#62 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[31]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[31]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#63 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[3]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#64 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[4]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#65 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[5]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#66 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[6]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#67 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[7]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#68 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[8]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#69 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[9]_LDC_i_1/O, cell cantavi_streamer_project_i/org_audio2eth_interl_0/U0/curr_tx_time_code_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#70 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/time_sync_block_0/U0/path_dly_mvn_avg_inst/E[0] is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/time_sync_block_0/U0/path_dly_mvn_avg_inst/media_half_path_delay_val_reg[31]_i_1/O, cell cantavi_streamer_project_i/time_sync_block_0/U0/path_dly_mvn_avg_inst/media_half_path_delay_val_reg[31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#71 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg[0]_i_2/O, cell cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#72 Warning
+Gated clock check  
+Net cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_axis_gmii_rx_inst/ps_tx_pkt_count_reg0 is a gated clock net sourced by a combinational pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_axis_gmii_rx_inst/ps_tx_pkt_count_reg[0]_i_2/O, cell cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_axis_gmii_rx_inst/ps_tx_pkt_count_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	adau1761_bclk_0_IBUF_inst (IBUF.O) is locked to AA6
+	adau1761_bclk_0_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y17
+
+Related violations: <none>
+
+PLCK-12#2 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	phy_rx_clk_0_IBUF_inst (IBUF.O) is locked to W10
+	cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/clk_bufg (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y1
+
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/led_reg[0]_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/led_reg_reg[0]
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg[0]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[0], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[10], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[11], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[12], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[13], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[14], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[15], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[1], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[2], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[3], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[4], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[5], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[6], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[7], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/cs_tx_pkt_count_reg_reg[8] (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_axis_gmii_rx_inst/ps_tx_pkt_count_reg[0]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[0], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[10], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[11], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[12], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[13], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[14], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[15], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[1], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[2], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[3], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[4], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[5], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[6], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[7], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/ps_tx_pkt_count_reg_reg[8] (the first 15 of 16 listed)
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[0].audio_payload_fifo/mem_reg has an input control pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[0].audio_payload_fifo/mem_reg/ENARDEN (net: cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[0].audio_payload_fifo/mem_reg_ENARDEN_cooolgate_en_sig_79) which is driven by a register (cantavi_streamer_project_i/time_sync_block_0/U0/tvalid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[0].audio_payload_fifo/mem_reg has an input control pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[0].audio_payload_fifo/mem_reg/WEA[0] (net: cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[0].audio_payload_fifo/s_time_sync_payload_axis_tvalid) which is driven by a register (cantavi_streamer_project_i/time_sync_block_0/U0/tvalid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#3 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[1].audio_payload_fifo/mem_reg has an input control pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[1].audio_payload_fifo/mem_reg/ENARDEN (net: cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[1].audio_payload_fifo/mem_reg_ENARDEN_cooolgate_en_sig_80) which is driven by a register (cantavi_streamer_project_i/org_audio2eth_interl_0/U0/tvalid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#4 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[1].audio_payload_fifo/mem_reg has an input control pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[1].audio_payload_fifo/mem_reg/WEA[0] (net: cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_audio_to_udp_fifo_bank[1].audio_payload_fifo/s_audio_payload_axis_tvalid) which is driven by a register (cantavi_streamer_project_i/org_audio2eth_interl_0/U0/tvalid_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#5 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_udp_to_audio_fifo_bank[0].from_udp_switch_to_audio/mem_reg_0 has an input control pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_udp_to_audio_fifo_bank[0].from_udp_switch_to_audio/mem_reg_0/ENBWREN (net: cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_udp_to_audio_fifo_bank[0].from_udp_switch_to_audio/mem_reg_0_i_2_n_0) which is driven by a register (cantavi_streamer_project_i/time_sync_block_0/U0/s_tready_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#6 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_udp_to_audio_fifo_bank[1].from_udp_switch_to_audio/mem_reg_0 has an input control pin cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_udp_to_audio_fifo_bank[1].from_udp_switch_to_audio/mem_reg_0/ENBWREN (net: cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/from_udp_to_audio_fifo_bank[1].from_udp_switch_to_audio/mem_reg_0_i_2__0_n_0) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/tready_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#7 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/rx_fifo/mem_reg_0 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/rx_fifo/mem_reg_0/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/rx_fifo/mem_reg_0_ENARDEN_cooolgate_en_sig_10) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/rx_fifo/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#8 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/tx_fifo/mem_reg has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/tx_fifo/mem_reg/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/tx_fifo/mem_reg_ENARDEN_cooolgate_en_sig_12) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/tx_fifo/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#9 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_0 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_0/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_0_ENARDEN_cooolgate_en_sig_1) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#10 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_1 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_1/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_1_ENARDEN_cooolgate_en_sig_2) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#11 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_2 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_2/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_2_ENARDEN_cooolgate_en_sig_3) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#12 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_3 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_3/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_3_ENARDEN_cooolgate_en_sig_4) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#13 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_4 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_4/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_4_ENARDEN_cooolgate_en_sig_5) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#14 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_5 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_5/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_5_ENARDEN_cooolgate_en_sig_6) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#15 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_6 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_6/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_6_ENARDEN_cooolgate_en_sig_7) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#16 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_7 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_7/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_7_ENARDEN_cooolgate_en_sig_8) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#17 Warning
+RAMB36 async control check  
+The RAMB36E1 cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_8 has an input control pin cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_8/ENARDEN (net: cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_ps_rx_fifo_inst/mem_reg_0_8_ENARDEN_cooolgate_en_sig_9) which is driven by a register (cantavi_streamer_project_i/user_cross_layer_swi_0/inst/from_cs_rx_fifo_inst/s_rst_sync3_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[10] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[5]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[11] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[6]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[12] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[7]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[5] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[0]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[6] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[1]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[7] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[2]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[8] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[3]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRARDADDR[9] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToRead[4]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pRd/q_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[10] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[5]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[11] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[6]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[12] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[7]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[5] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[0]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[6] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[1]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[7] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[2]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[8] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[3]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ADDRBWRADDR[9] (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/pNextWordToWrite[4]) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/GrayCounter_pWr/q_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ENARDEN (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg_0) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/empty_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ENARDEN (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg_0) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/replace_pkt_exit_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ENARDEN (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg_0) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/replace_pkt_raw_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg has an input control pin cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg/ENARDEN (net: cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/FIFO_LEFT_EVEN_OutDAC/Mem_reg_0) which is driven by a register (cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/replace_pkt_rel_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+130 net(s) have no routable loads. The problem bus(es) and/or net(s) are cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/busy, cantavi_streamer_project_i/user_cross_layer_swi_0/inst/busy, cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/read_data[63:0], cantavi_streamer_project_i/user_cross_layer_swi_0/inst/read_data[63:0].
+Related violations: <none>
+
+REQP-165#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_EVEN_InADC/Mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-165#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (cantavi_streamer_project_i/org_audio2eth_interl_0/U0/FIFO_ODD_InADC/Mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

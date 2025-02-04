@@ -1,0 +1,312 @@
+{
+   "ExpandedHierarchyInLayout":"/AudioProcessingChannel",
+   "PinnedBlocks":"",
+   "PinnedPorts":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port serial_data_in1_0 -pg 1 -y 4650 -defaultsOSRD
+preplace port adau1761_bclk_0 -pg 1 -y 4240 -defaultsOSRD
+preplace port adau1761_cclk_0 -pg 1 -y 4200 -defaultsOSRD
+preplace port DDR -pg 1 -y 3380 -defaultsOSRD
+preplace port btnd_0 -pg 1 -y 2440 -defaultsOSRD
+preplace port phy_tx_clk_0 -pg 1 -y 3540 -defaultsOSRD
+preplace port VBAT -pg 1 -y 3350 -defaultsOSRD
+preplace port btnl_0 -pg 1 -y 2410 -defaultsOSRD
+preplace port SCLK -pg 1 -y 3260 -defaultsOSRD
+preplace port ctrl_sw_out_0 -pg 1 -y 4520 -defaultsOSRD
+preplace port clk_100_in -pg 1 -y 3650 -defaultsOSRD
+preplace port DC -pg 1 -y 3290 -defaultsOSRD
+preplace port phy_mdio_0 -pg 1 -y 3660 -defaultsOSRD
+preplace port phy_int_n_0 -pg 1 -y 3840 -defaultsOSRD
+preplace port phy_reset_n_0 -pg 1 -y 3630 -defaultsOSRD
+preplace port btnr_0 -pg 1 -y 2470 -defaultsOSRD
+preplace port adau1761_adc_sdata_0 -pg 1 -y 4300 -defaultsOSRD
+preplace port lrclk1_0 -pg 1 -y 4490 -defaultsOSRD
+preplace port mclk1_0 -pg 1 -y 4430 -defaultsOSRD
+preplace port sync_en_out_0 -pg 1 -y 3140 -defaultsOSRD
+preplace port adau1761_lrclk_0 -pg 1 -y 4270 -defaultsOSRD
+preplace port adau1761_cout_0 -pg 1 -y 4210 -defaultsOSRD
+preplace port adau1761_cdata_0 -pg 1 -y 4260 -defaultsOSRD
+preplace port serial_data_out1_0 -pg 1 -y 4580 -defaultsOSRD
+preplace port adau1761_clatchn_0 -pg 1 -y 4230 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 3410 -defaultsOSRD
+preplace port bclk1_0 -pg 1 -y 4460 -defaultsOSRD
+preplace port phy_mdc_0 -pg 1 -y 3690 -defaultsOSRD
+preplace port adau1761_mclk -pg 1 -y 4550 -defaultsOSRD
+preplace port btnu_0 -pg 1 -y 2380 -defaultsOSRD
+preplace port SDIN -pg 1 -y 3230 -defaultsOSRD
+preplace port phy_pme_n_0 -pg 1 -y 3870 -defaultsOSRD
+preplace port RES -pg 1 -y 3320 -defaultsOSRD
+preplace port VDD -pg 1 -y 4170 -defaultsOSRD
+preplace port tsync_out_0 -pg 1 -y 3170 -defaultsOSRD
+preplace port btnc_0 -pg 1 -y 2500 -defaultsOSRD
+preplace port phy_rx_clk_0 -pg 1 -y 3750 -defaultsOSRD
+preplace port adau1761_dac_sdata_0 -pg 1 -y 4290 -defaultsOSRD
+preplace port phy_rx_ctl_0 -pg 1 -y 3810 -defaultsOSRD
+preplace port phy_tx_ctl_0 -pg 1 -y 3600 -defaultsOSRD
+preplace portBus led_0 -pg 1 -y 2510 -defaultsOSRD
+preplace portBus sw_0 -pg 1 -y 4620 -defaultsOSRD
+preplace portBus phy_rxd_0 -pg 1 -y 3780 -defaultsOSRD
+preplace portBus phy_txd_0 -pg 1 -y 3570 -defaultsOSRD
+preplace inst AudioProcessingChannel|synchronizer_5 -pg 1 -lvl 1 -y 280 -defaultsOSRD
+preplace inst AudioProcessingChannel|user_org_plc_seq_ip_0 -pg 1 -lvl 3 -y 1450 -defaultsOSRD
+preplace inst AudioProcessingChannel|synchronizer_6 -pg 1 -lvl 1 -y 520 -defaultsOSRD
+preplace inst time_sync_block_0 -pg 1 -lvl 7 -y 2960 -defaultsOSRD
+preplace inst mixer_0 -pg 1 -lvl 3 -y 2330 -defaultsOSRD
+preplace inst AudioProcessingChannel|eth_to_audio_plc_com_0 -pg 1 -lvl 4 -y 600 -defaultsOSRD
+preplace inst org_audio2eth_interl_0 -pg 1 -lvl 4 -y 2170 -defaultsOSRD
+preplace inst FILTER_IIR_0 -pg 1 -lvl 4 -y 1450 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 2670 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 1950 -defaultsOSRD
+preplace inst Volume_Pregain_0 -pg 1 -lvl 4 -y 1660 -defaultsOSRD
+preplace inst ZedboardOLED_0 -pg 1 -lvl 4 -y 3230 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 4 -y 2810 -defaultsOSRD
+preplace inst AudioProcessingChannel|audio_fader_0 -pg 1 -lvl 2 -y 380 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 4 -y 1880 -defaultsOSRD
+preplace inst AudioProcessingChannel|audio_fader_1 -pg 1 -lvl 2 -y 760 -defaultsOSRD
+preplace inst AudioProcessingChannel|FILTER_IIR_1 -pg 1 -lvl 4 -y 1730 -defaultsOSRD
+preplace inst AudioProcessingChannel|Volume_Pregain_1 -pg 1 -lvl 3 -y 2040 -defaultsOSRD
+preplace inst pmod_controller_0 -pg 1 -lvl 4 -y 2990 -defaultsOSRD
+preplace inst AudioProcessingChannel -pg 1 -lvl 5 -y 260 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 2910 -defaultsOSRD
+preplace inst eth_udp_axi_arp_stack_0 -pg 1 -lvl 6 -y 2560 -defaultsOSRD
+preplace inst user_cross_layer_swi_0 -pg 1 -lvl 7 -y 3810 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -y 3490 -defaultsOSRD
+preplace inst AudioProcessingChannel|synchronizer_3 -pg 1 -lvl 1 -y 400 -defaultsOSRD
+preplace inst AudioProcessingChannel|mixer_1 -pg 1 -lvl 3 -y 720 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 2930 -defaultsOSRD
+preplace inst AudioProcessingChannel|synchronizer_4 -pg 1 -lvl 1 -y 130 -defaultsOSRD
+preplace inst ZedCodec -pg 1 -lvl 4 -y 4038 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 3330 -defaultsOSRD
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_dpk_enable_out 1 1 4 3630 130 NJ 130 NJ 130 5440
+preplace netloc AudioProcessingChannel_path_tc_valid_out 1 5 2 NJ 1560 7580
+preplace netloc processing_system7_0_ENET1_GMII_TXD 1 2 5 850J 3370 NJ 3370 NJ 3370 NJ 3370 7410
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1540
+preplace netloc adau1761_controller_0_adau1761_cclk 1 4 4 NJ 3908 NJ 3908 7300J 4200 NJ
+preplace netloc processing_system7_0_ENET1_GMII_TX_ER 1 2 5 980J 3390 NJ 3390 NJ 3390 NJ 3390 7360
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_replace_pkt_out 1 2 3 4180 1060 NJ 1060 5540
+preplace netloc AudioProcessingChannel|ZedCodec_next_adc_sample 1 0 4 3130J 1000 3490 110 4070 530 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 310 3660 900
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_UP_STEP_PULSES_OUT 1 1 4 3580 80 NJ 80 NJ 80 5570
+preplace netloc user_cross_layer_swi_0_phy_tx_ctl 1 7 1 8270J
+preplace netloc clk_wiz_0_clk_125_out1 1 3 5 1740 2410 2330 2270 6000 2030 7520 2760 8020
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_COEF_MAX_OUT 1 1 4 3530 50 NJ 50 NJ 50 5630
+preplace netloc user_cross_layer_swi_0_from_ps_fifo_status_overflow 1 5 3 6250 1780 NJ 1780 8200
+preplace netloc time_sync_block_0_status2_out 1 5 3 6240 1980 NJ 1980 8010
+preplace netloc AudioProcessingChannel|synchronizer_3_signal_out 1 1 1 3510
+preplace netloc AudioProcessingChannel|time_sync_0_tc_count_adjusted_out 1 0 1 N
+preplace netloc ps7_0_axi_periph_M07_AXI 1 3 1 1640
+preplace netloc FILTER_IIR_1_FILTER_DONE 1 0 6 40 1780 NJ 1780 NJ 1780 NJ 1780 2510J 2180 5870
+preplace netloc user_cross_layer_swi_0_from_ps_error_bad_fcs 1 5 3 6340 1960 NJ 1960 8120
+preplace netloc mixer_0_audio_mixed_a_b_right_out 1 3 1 1620
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_dpk_max_out 1 1 4 3610 140 NJ 140 NJ 140 5460
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_to_audio_m_axis 1 3 1 4670
+preplace netloc fm_audio_s_axis_aresetn_1 1 4 3 2530 2230 5980J 2050 7340
+preplace netloc user_org_plc_seq_ip_0_status1_out 1 5 1 6010
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 2 1 880
+preplace netloc AudioProcessingChannel|audio_fader_1_OUT_VOLCTRL_L 1 2 1 N
+preplace netloc user_cross_layer_swi_0_mac_status_bad_frame 1 5 3 6180 1770 NJ 1770 8190
+preplace netloc AudioProcessingChannel|synchronizer_6_signal_out 1 1 1 3500
+preplace netloc ps7_0_axi_periph_M14_AXI 1 3 4 1600J 2460 NJ 2460 6100J 2080 7560
+preplace netloc AudioProcessingChannel|audio_to_eth_interfa_0_m_audio_payload_hdr_valid 1 0 3 3150J 1750 3480J 1740 4090
+preplace netloc eth_udp_axi_arp_stack_0_s_audio_payload_hdr_ready 1 3 4 1770 2380 NJ 2380 6050J 2040 7360
+preplace netloc AudioProcessingChannel|Net1 1 0 3 3160J 1760 3490J 1750 4080
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_rx_time_code_out 1 4 1 5670
+preplace netloc processing_system7_0_FIXED_IO 1 2 6 930J 3400 NJ 3400 NJ 3400 NJ 3400 NJ 3400 8270J
+preplace netloc user_cross_layer_swi_0_rst_out 1 3 5 1770 2550 2480 2290 5970 1790 NJ 1790 8140
+preplace netloc clk_wiz_0_clk_out1 1 3 1 1490
+preplace netloc AudioProcessingChannel|audio_fader_1_OUT_VOLCTRL_R 1 2 1 N
+preplace netloc clk_wiz_0_clk_out2 1 3 4 NJ 3490 NJ 3490 6150 3570 7430J
+preplace netloc clk_wiz_0_clk_100_out 1 1 6 300 2830 890 2230 1660 2400 2380 2350 6080 2020 7470
+preplace netloc btnc_0_1 1 0 6 -10J 2470 NJ 2470 NJ 2470 NJ 2470 2510J 2390 6140J
+preplace netloc time_sync_block_0_initiate_sync_response_out 1 5 3 6170 1860 NJ 1860 8050
+preplace netloc AudioProcessingChannel|audio_to_eth_interfa_0_m_audio_payload_axis 1 0 3 NJ 1190 NJ 1190 N
+preplace netloc ps7_0_axi_periph_M10_AXI 1 3 1 1550
+preplace netloc btnr_0_1 1 0 6 -20J 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 6160J
+preplace netloc sync_en_in_0_1 1 3 5 1760 2340 2340 2280 5920J 1810 NJ 1810 8110
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_path_rx_tc_code_out 1 3 2 4710 1590 5690J
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_status2_out 1 3 2 N 1440 NJ
+preplace netloc phy_rx_clk_0_1 1 0 7 NJ 3750 NJ 3750 NJ 3750 NJ 3750 NJ 3750 NJ 3750 7350J
+preplace netloc user_cross_layer_swi_0_ps_gmii_rx_clk 1 2 6 920J 3590 NJ 3590 NJ 3590 NJ 3590 7390J 3440 7980
+preplace netloc adau1761_lrclk_0 1 0 4 NJ 4270 NJ 4270 NJ 4270 1720J
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 5 990 2240 1680 2390 2410 2330 6110 2060 7440
+preplace netloc AudioProcessingChannel|FILTER_IIR_1_FILTER_DONE 1 4 1 5680
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_dpk_clear_out 1 1 4 3600 120 NJ 120 NJ 120 5470
+preplace netloc AudioProcessingChannel|rst_ps7_0_100M_peripheral_aresetn 1 0 4 NJ 1990 NJ 1990 4120 1830 4760
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fifo_occ_out 1 2 3 4160 160 NJ 160 5410
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_plc_direction_out 1 1 4 3560 1780 4060J 1790 4750J 1610 5560
+preplace netloc ps7_0_axi_periph_M08_AXI 1 3 1 1630
+preplace netloc time_sync_block_0_m_audio_payload_hdr_valid 1 5 3 6230 1850 NJ 1850 8090
+preplace netloc user_cross_layer_swi_0_to_ps_gmii_rx_er 1 2 6 940J 3410 1490J 3420 NJ 3420 NJ 3420 NJ 3420 8050
+preplace netloc user_cross_layer_swi_0_mac_status_overflow 1 5 3 6210 1800 NJ 1800 8180
+preplace netloc AudioProcessingChannel|tsync_in_0_1 1 0 3 3190J 1770 3510J 1760 4100
+preplace netloc user_cross_layer_swi_0_sel_status 1 5 3 6270 4178 7250J 4170 7980
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_plc_pkt_end_out 1 2 3 4170 1050 NJ 1050 5500
+preplace netloc ps7_0_axi_periph_M13_AXI 1 3 1 1520
+preplace netloc ZedboardOLED_0_RES 1 4 4 2340J 3230 NJ 3230 NJ 3230 8240J
+preplace netloc time_sync_block_0_m_time_sync_axis 1 5 3 6270 1820 NJ 1820 8070
+preplace netloc AudioProcessingChannel_path_rx_tc_code_out 1 3 4 1750 1990 2400J 2170 5930 1910 7550
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_dpk_audio_r_out 1 0 5 3140 50 3490J 100 4080J 110 NJ 110 5420
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fifo_empty_out 1 2 3 4160 1800 4780J 1620 5580
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_rst_out 1 1 4 3610 1030 NJ 1030 NJ 1030 5530
+preplace netloc AudioProcessingChannel|mixer_1_audio_mixed_a_b_right_out 1 2 3 4180 1870 4720 1480 NJ
+preplace netloc ps7_0_axi_periph_M15_AXI 1 3 4 1540J 3120 NJ 3120 NJ 3120 7490
+preplace netloc phy_rxd_0_1 1 0 7 NJ 3780 NJ 3780 NJ 3780 NJ 3780 NJ 3780 NJ 3780 7340J
+preplace netloc axi_gpio_1_ip2intc_irpt 1 0 5 50 2460 NJ 2460 NJ 2460 1500J 2520 2270
+preplace netloc eth_udp_axi_arp_stack_0_to_sw_tx_axis 1 6 1 7500
+preplace netloc user_cross_layer_swi_0_mac_status_good_frame 1 5 3 6220 1830 NJ 1830 8170
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_plc_min_out 1 1 4 3630 1110 NJ 1110 NJ 1110 5420
+preplace netloc Volume_Pregain_0_OUT_RDY 1 0 5 0 1560 NJ 1560 NJ 1560 1530 1560 2280
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_next_play_out_time_out 1 2 3 4120 170 NJ 170 5510
+preplace netloc user_cross_layer_swi_0_to_ps_gmii_rx_dv 1 2 6 880J 3600 NJ 3600 NJ 3600 NJ 3600 7420J 3450 7990
+preplace netloc phy_pme_n_0_1 1 0 7 NJ 3870 NJ 3870 NJ 3870 1730J 3848 NJ 3848 NJ 3848 7310J
+preplace netloc btnu_0_1 1 0 6 NJ 2380 NJ 2380 980J 2440 NJ 2440 NJ 2440 6120J
+preplace netloc AudioProcessingChannel|clk_wiz_0_clk_100_out 1 0 4 NJ 1970 NJ 1970 4110 1820 4770
+preplace netloc ps7_0_axi_periph_M12_AXI 1 3 2 1520 1170 NJ
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_fifo_empty_out 1 3 2 N 1400 NJ
+preplace netloc ZedboardOLED_0_VBAT 1 4 4 2290J 3270 NJ 3270 NJ 3270 8230J
+preplace netloc AudioProcessingChannel|synchronizer_5_signal_out 1 1 1 N
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_s_ch1_audio_payload_hdr_ready 1 4 1 5640
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_to_udp_m_axis 1 3 2 N 1340 NJ
+preplace netloc clk_100_in_1 1 0 3 NJ 3650 NJ 3650 790J
+preplace netloc AudioProcessingChannel|sync_en_in_0_1 1 0 4 3200J 1780 3530J 1770 4050 550 N
+preplace netloc AudioProcessingChannel|audio_fader_0_OUT_VOLCTRL_L 1 2 1 4060
+preplace netloc Volume_Pregain_1_OUT_VOLCTRL_L 1 2 4 1000 1960 NJ 1960 2490J 2200 5910
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_plc_clear_out 1 1 4 3570 1840 NJ 1840 NJ 1840 5550
+preplace netloc user_cross_layer_swi_0_phy_tx_clk 1 7 1 8260J
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_packet_available_out 1 3 1 4700
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_fifo_full_out 1 3 2 N 1380 NJ
+preplace netloc sw_0_1 1 0 4 0J 4310 NJ 4310 NJ 4310 1750J
+preplace netloc time_sync_block_0_sync_done_out 1 5 3 6290 1990 NJ 1990 7990
+preplace netloc user_org_plc_seq_ip_0_fifo_full_out 1 5 1 6060
+preplace netloc ZedCodec_mclk1_0 1 4 4 NJ 4068 NJ 4068 7240J 4430 NJ
+preplace netloc AudioProcessingChannel|audio_fader_0_OUT_VOLCTRL_R 1 2 1 4040
+preplace netloc Volume_Pregain_1_OUT_VOLCTRL_R 1 2 4 1010 1970 NJ 1970 2350J 2210 5900
+preplace netloc AudioProcessingChannel_to_udp_m_axis 1 5 1 6090
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_current_sync_time_out 1 2 3 4110 90 NJ 90 5620
+preplace netloc adau1761_adc_sdata_0 1 0 4 NJ 4300 NJ 4300 NJ 4300 1730J
+preplace netloc eth_udp_axi_arp_stack_0_led 1 6 2 NJ 2510 NJ
+preplace netloc ps7_0_axi_periph_M06_AXI 1 3 2 1560 2530 2370J
+preplace netloc AudioProcessingChannel|ps7_0_axi_periph_M05_AXI 1 0 4 NJ 1810 NJ 1810 NJ 1810 4790
+preplace netloc user_org_plc_seq_ip_0_to_udp_hdr_valid 1 5 1 6070
+preplace netloc adau1761_controller_0_adau1761_clatchn 1 4 4 NJ 3928 NJ 3928 7290J 4230 NJ
+preplace netloc ZedCodec_lrclk1_0 1 4 4 NJ 4108 NJ 4108 7210J 4490 NJ
+preplace netloc ZedboardOLED_0_SCLK 1 4 4 NJ 3200 NJ 3200 NJ 3200 8270J
+preplace netloc org_audio2eth_interl_0_irq_out 1 0 5 20 1800 NJ 1800 NJ 1800 NJ 1800 2270
+preplace netloc org_audio2eth_interl_0_sync_en_out 1 4 4 2390J 2240 5940J 1880 NJ 1880 8270J
+preplace netloc user_cross_layer_swi_0_phy_mdc 1 7 1 8210J
+preplace netloc pmod_controller_0_Rotary_event 1 0 5 0 2490 NJ 2490 NJ 2490 1540J 2500 2300
+preplace netloc ZedCodec_line_in_r_125 1 2 3 1030 2220 1710 2350 2320
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_dpk_audio_l_out 1 0 5 3190 60 3480J 90 4100J 100 NJ 100 5430
+preplace netloc ZedCodec_adau1761_mclk 1 4 4 NJ 4148 NJ 4148 7260J 4180 8180J
+preplace netloc eth_to_audio_plc_com_0_s_ch1_audio_payload_hdr_ready 1 5 1 6020
+preplace netloc user_cross_layer_swi_0_to_ps_gmii_col 1 2 6 960J 3580 NJ 3580 NJ 3580 NJ 3580 7370J 3430 8040
+preplace netloc ps7_0_axi_periph_M05_AXI 1 3 2 1570 2540 2360J
+preplace netloc org_audio2eth_interl_0_tsync_out 1 4 4 2420J 2250 5960J 1890 NJ 1890 8260J
+preplace netloc adau1761_cout_0_1 1 0 4 10J 3928 NJ 3928 NJ 3928 NJ
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_DOWN_STEP_PULSES_OUT 1 1 4 3550 70 NJ 70 NJ 70 5590
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_path_tc_valid_out 1 3 2 4750 1560 NJ
+preplace netloc user_cross_layer_swi_0_mdio_i 1 2 5 830J 3610 NJ 3610 NJ 3610 NJ 3610 7460
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1510
+preplace netloc time_sync_block_0_status1_out 1 5 3 6200 1920 NJ 1920 8030
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_dpk_min_out 1 1 4 3620 150 NJ 150 NJ 150 5450
+preplace netloc btnl_0_1 1 0 6 NJ 2410 NJ 2410 900J 2430 NJ 2430 2460J 2320 NJ
+preplace netloc Net 1 2 6 950J 3350 NJ 3350 NJ 3350 NJ 3350 NJ 3350 8060
+preplace netloc time_sync_block_0_sync_time_code_out 1 3 5 1770 2000 2440 2220 5950J 2010 NJ 2010 8000
+preplace netloc ZedCodec_serial_data_out1_0 1 4 4 NJ 4168 NJ 4168 7230J 4190 8000J
+preplace netloc time_sync_block_0_s_time_sync_hdr_ready 1 5 3 6260 1900 NJ 1900 8080
+preplace netloc user_cross_layer_swi_0_to_ps_gmii_crs 1 2 6 800J 3570 1720J 3410 NJ 3410 NJ 3410 NJ 3410 8070
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_dpkt_direction_out 1 1 4 3590 1080 NJ 1080 NJ 1080 5480
+preplace netloc i2s_transmitter_0_sd 1 4 4 NJ 3968 NJ 3968 7270J 4290 NJ
+preplace netloc fm_audio_hdr_valid_1 1 4 1 2310
+preplace netloc AudioProcessingChannel|ps7_0_axi_periph_M12_AXI 1 0 3 NJ 1170 NJ 1170 N
+preplace netloc ZedboardOLED_0_SDIN 1 4 4 2380J 3240 NJ 3240 NJ 3240 8250J
+preplace netloc adau1761_controller_0_adau1761_cdata 1 4 4 NJ 3948 NJ 3948 7280J 4260 NJ
+preplace netloc ZedCodec_next_adc_sample 1 3 4 1730 2450 2450 2260 6030J 2070 7540J
+preplace netloc eth_udp_axi_arp_stack_0_media_pkt_tx_en_out 1 6 1 7510
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_status1_out 1 3 2 N 1420 NJ
+preplace netloc AudioProcessingChannel_path_rx_seq_num_out 1 3 3 1720 1980 2500J 2160 5860
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1490
+preplace netloc serial_data_in1_0_1 1 0 4 40J 4320 NJ 4320 NJ 4320 1760J
+preplace netloc AudioProcessingChannel|full_udp_stack_ip_0_m_ch1_audio_payload_axis 1 0 3 NJ 1210 NJ 1210 N
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_plc_audio_l_out 1 0 5 3190 200 3480J 170 4100J 180 NJ 180 5400
+preplace netloc user_cross_layer_swi_0_m_to_cs_axis 1 5 3 6320 1870 NJ 1870 8100
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_new_pkt_ready_out 1 3 1 4690
+preplace netloc AudioProcessingChannel|ps7_0_axi_periph_M06_AXI 1 0 4 3120J 210 3500J 180 4080J 190 4670
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_irq_out 1 4 1 5650
+preplace netloc ZedCodec_ctrl_sw_out_0 1 4 4 NJ 4128 NJ 4128 7200J 4520 NJ
+preplace netloc axi_gpio_2_ip2intc_irpt 1 0 5 10 1770 NJ 1770 NJ 1770 NJ 1770 2290
+preplace netloc user_org_plc_seq_ip_0_fifo_empty_out 1 5 1 6040
+preplace netloc user_cross_layer_swi_0_phy_txd 1 7 1 8270J
+preplace netloc phy_rx_ctl_0_1 1 0 7 NJ 3810 NJ 3810 NJ 3810 NJ 3810 NJ 3810 NJ 3810 7330J
+preplace netloc ZedCodec_bclk1_0 1 4 4 NJ 4088 NJ 4088 7220J 4460 NJ
+preplace netloc user_cross_layer_swi_0_from_ps_fifo_status_bad_frame 1 5 3 6350 1940 NJ 1940 8150
+preplace netloc processing_system7_0_FCLK_CLK1 1 2 5 820J 3760 NJ 3760 NJ 3760 NJ 3760 N
+preplace netloc time_sync_block_0_initiate_sync_request_out 1 5 3 6190 1840 NJ 1840 8060
+preplace netloc processing_system7_0_FCLK_CLK2 1 2 5 810J 3650 NJ 3650 NJ 3650 NJ 3650 7390
+preplace netloc AudioProcessingChannel|Volume_Pregain_1_OUT_RDY 1 3 2 4800 1500 NJ
+preplace netloc processing_system7_0_FCLK_CLK3 1 2 5 780J 3640 NJ 3640 NJ 3640 NJ 3640 7400
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_play_out_delay_out 1 2 3 4140 1040 NJ 1040 5400
+preplace netloc user_cross_layer_swi_0_phy_reset_n 1 7 1 NJ
+preplace netloc user_cross_layer_swi_0_from_ps_fifo_status_good_frame 1 5 3 6310 1930 NJ 1930 8160
+preplace netloc AudioProcessingChannel|mixer_1_audio_mixed_a_b_left_out 1 2 3 4170 1860 4730 1460 NJ
+preplace netloc eth_to_audio_plc_com_0_irq_out 1 0 6 -20 1750 NJ 1750 NJ 1750 1690J 2360 NJ 2360 5880
+preplace netloc Volume_Pregain_1_OUT_RDY 1 0 6 50 1790 NJ 1790 NJ 1790 NJ 1790 2280J 2190 5890
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_skip_slot_out 1 2 3 4150 1070 NJ 1070 5410
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_COEF_MIN_OUT 1 1 4 3540 60 NJ 60 NJ 60 5600
+preplace netloc user_cross_layer_swi_0_from_ps_error_bad_frame 1 5 3 6330 1950 NJ 1950 8130
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_plc_audio_r_out 1 0 5 3200 1020 NJ 1020 NJ 1020 NJ 1020 5490
+preplace netloc fm_udp_s_axis_1 1 4 3 2510 0 NJ 0 7430
+preplace netloc FILTER_IIR_0_FILTER_DONE 1 0 5 30 1760 NJ 1760 NJ 1760 NJ 1760 2290
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 900
+preplace netloc phy_int_n_0_1 1 0 7 NJ 3840 NJ 3840 NJ 3840 1710J 3838 NJ 3838 NJ 3838 7320J
+preplace netloc ZedboardOLED_0_DC 1 4 4 NJ 3220 NJ 3220 NJ 3220 8260J
+preplace netloc ps7_0_axi_periph_M09_AXI 1 3 1 1530
+preplace netloc user_org_plc_seq_ip_0_status2_out 1 5 1 5990
+preplace netloc AudioProcessingChannel|rst_in_1 1 0 3 3180J 1730 NJ 1730 4030
+preplace netloc processing_system7_0_ENET1_MDIO_O 1 2 5 860J 3630 NJ 3630 NJ 3630 NJ 3630 7420
+preplace netloc processing_system7_0_DDR 1 2 6 910J 3360 NJ 3360 NJ 3360 NJ 3360 NJ 3360 8270J
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1610
+preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 40 2450 NJ 2450 NJ 2450 1670J 2510 2290
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_sync_time_code_out 1 4 1 N
+preplace netloc AudioProcessingChannel|sync_time_code_in_1 1 0 4 3170J 1040 NJ 1040 4030J 620 4680
+preplace netloc xlconcat_0_dout 1 1 1 290
+preplace netloc processing_system7_0_ENET1_MDIO_T 1 2 5 840J 3620 NJ 3620 NJ 3620 NJ 3620 7450
+preplace netloc ZedCodec_line_in_l_125 1 2 3 1020 2210 1700 2370 2520
+preplace netloc time_sync_block_0_udp_payload_length 1 5 3 6280 1970 NJ 1970 8040
+preplace netloc ps7_0_axi_periph_M11_AXI 1 3 3 1590 2490 NJ 2490 6130J
+preplace netloc AudioProcessingChannel_path_tx_tc_code_out 1 5 2 NJ 1580 7570
+preplace netloc mixer_0_audio_mixed_a_b_left_out 1 3 1 1650
+preplace netloc AudioProcessingChannel|time_sync_0_tc_start 1 0 1 N
+preplace netloc eth_udp_axi_arp_stack_0_m_time_sync_payload_axis 1 6 1 7530
+preplace netloc ZedboardOLED_0_VDD 1 4 4 2290J 3290 NJ 3290 NJ 3290 8220J
+preplace netloc AudioProcessingChannel|clk_wiz_0_clk_125_out1 1 0 4 3140J 1010 3520 1010 4100 630 N
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 2 1580 2560 2430J
+preplace netloc AudioProcessingChannel|synchronizer_4_signal_out 1 1 1 3510
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_path_tx_tc_code_out 1 3 2 4740 1580 NJ
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_path_rx_seq_num_out 1 3 2 4680 1600 5630J
+preplace netloc Net1 1 7 1 8210J
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_rx_packet_seq_cnt_out 1 4 1 5660
+preplace netloc AudioProcessingChannel|Net 1 0 5 3130 40 NJ 40 NJ 40 NJ 40 5640
+preplace netloc AudioProcessingChannel|ps7_0_axi_periph_M04_AXI 1 0 3 NJ 1790 NJ 1790 4040
+preplace netloc Net2 1 2 6 840J 3340 NJ 3340 NJ 3340 NJ 3340 NJ 3340 8030
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_plc_max_out 1 1 4 3620 1100 NJ 1100 NJ 1100 5430
+preplace netloc time_sync_block_0_sync_request_rx_out 1 5 3 6300 2000 NJ 2000 7980
+preplace netloc AudioProcessingChannel|time_sync_0_tc_adjust_out 1 0 1 N
+preplace netloc fm_audio_s_axis_1 1 4 1 2300
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fade_plc_enable_out 1 1 4 3600 1090 NJ 1090 NJ 1090 5520
+preplace netloc btnd_0_1 1 0 6 -20J 2420 NJ 2420 NJ 2420 NJ 2420 2470J 2340 NJ
+preplace netloc eth_udp_axi_arp_stack_0_s_time_sync_payload_hdr_ready 1 6 1 7490
+preplace netloc AudioProcessingChannel|user_org_plc_seq_ip_0_to_udp_hdr_valid 1 3 2 N 1360 NJ
+preplace netloc adau1761_bclk_0 1 0 4 NJ 4240 NJ 4240 NJ 4240 1710J
+preplace netloc org_audio2eth_interl_0_udp_payload_length 1 4 2 2350 2760 NJ
+preplace netloc processing_system7_0_ENET1_MDIO_MDC 1 2 5 970J 3330 1670J 3110 NJ 3110 NJ 3110 7480
+preplace netloc AudioProcessingChannel|eth_to_audio_plc_com_0_fifo_full_out 1 2 3 4130 1850 NJ 1850 5610
+preplace netloc processing_system7_0_ENET1_GMII_TX_EN 1 2 5 870J 3380 NJ 3380 NJ 3380 NJ 3380 7380
+levelinfo -pg 1 -40 190 550 1260 2060 3310 6958 7780 8290 -top -30 -bot 6070
+levelinfo -hier AudioProcessingChannel * 3340 3840 4440 5160 *
+"
+}
+{
+   "da_clkrst_cnt":"2"
+}

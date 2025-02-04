@@ -1,0 +1,16 @@
+This folder contains 2 folders: sd1 and sd2, these two folders contain the files to be added to the SDCards
+
+The difference between the two folders is in the mac adresses contained in devicetree.dtb files (device trees)
+
+We no longer have to configure the MAC on the command line this is now set in the dtb files.
+
+sd1 should be placed in one sdcard and sd2 in the other sdcard
+
+To setup just replace the corresponding files on the SD cards with these files
+
+It is just like last time:
+
+
+uImage, devicetree.dtb and BOOT.bin go to the first partition (boot partition)
+
+connect is the application, it goes to the /usr/bin/ folder

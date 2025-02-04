@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER user.eth_arp_udp_stack
+	OPTION supported_peripherals = (user.eth_arp_udp_stack);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = user.eth_arp_udp_stack;
+END DRIVER

@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>cantavi_streamer_project_audio_fader_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>CLK_125</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>CLK_125</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK_125.FREQ_HZ">125000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK_125.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK_125.CLK_DOMAIN">cantavi_streamer_project_user_cross_layer_swi_0_0_clk_125_out</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK_125.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK_125.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK_125.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Audio_Fader_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Apr 07 10:49:12 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ceca3c6e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
+        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>cantavi_streamer_project_audio_fader_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Apr 07 10:49:12 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ceca3c6e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+        <spirit:displayName>VHDL Simulation</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Audio_Fader_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Apr 07 10:49:12 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:cbd44fe8</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
+        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>cantavi_streamer_project_audio_fader_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Apr 07 10:49:12 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:cbd44fe8</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>CLK_125</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>OUT_VOLCTRL_L</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>OUT_VOLCTRL_R</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>OUT_RDY</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>IN_SIG_L</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>IN_SIG_R</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fade_enable_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>new_sample_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>replace_in_progress_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fade_direction_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fade_clear_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fade_max_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fade_min_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UP_STEP_PULSES</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.STEP_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DOWN_STEP_PULSES</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.STEP_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>IN_COEF_MIN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.INTBIT_WIDTH&apos;)) + spirit:decode(id(&apos;MODELPARAM_VALUE.FRACBIT_WIDTH&apos;))) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>IN_COEF_MAX</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.INTBIT_WIDTH&apos;)) + spirit:decode(id(&apos;MODELPARAM_VALUE.FRACBIT_WIDTH&apos;))) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>OUT_COEF</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.INTBIT_WIDTH&apos;)) + spirit:decode(id(&apos;MODELPARAM_VALUE.FRACBIT_WIDTH&apos;))) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>RST_IN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>INTBIT_WIDTH</spirit:name>
+        <spirit:displayName>Intbit Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INTBIT_WIDTH">24</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>FRACBIT_WIDTH</spirit:name>
+        <spirit:displayName>Fracbit Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FRACBIT_WIDTH">8</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>STEP_WIDTH</spirit:name>
+        <spirit:displayName>Step Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.STEP_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/AmplifierFP.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/Audio_Fader_Top_Module.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/MultiplierFP.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/gain_sweep.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/Audio_Fader_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/cantavi_streamer_project_audio_fader_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/AmplifierFP.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/Audio_Fader_Top_Module.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/MultiplierFP.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/gain_sweep.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a320/hdl/Audio_Fader_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/cantavi_streamer_project_audio_fader_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Audio Fader</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">5</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">cantavi_streamer_project_audio_fader_0_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>INTBIT_WIDTH</spirit:name>
+      <spirit:displayName>Intbit Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.INTBIT_WIDTH">24</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FRACBIT_WIDTH</spirit:name>
+      <spirit:displayName>Fracbit Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FRACBIT_WIDTH">8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>STEP_WIDTH</spirit:name>
+      <spirit:displayName>Step Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.STEP_WIDTH">32</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>audio_fader_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>41</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c3daed9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14343fba_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d66c32_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@245e591_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b0269cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c9864ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@757dd55c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77f1d9d7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b2e5eb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@540eb36c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d22fe2e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2db12c33_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b26760_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ae15e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d7cebdf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64995220_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b22928f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d6e60e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cb5eefe_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eb7091a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3078df03_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d090321_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d1ac28a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8f3d0bc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@237b32c4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a262701_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41372555_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b565bbb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67520a9c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@640dd794_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49659c91_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2388e14e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e44f4dc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@331fdf5d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4564ee2b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@386015f4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48a98ce1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632ff86e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cfbe974_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e23aa9c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f23a921_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cf3e07f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3904dad1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@379f59be_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27fce652_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2463f21b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ee01d7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f746a3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c7caf43_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118cff10_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20670fd2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222a6907_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a27f181_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c77f75_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de51898_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b40689_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e4f4895_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c154451_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e113a0e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d510e05_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0024bf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@666a8e64_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c3cc403_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4139ca91_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ee8800_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a3217ac_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c85260c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d3280da_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a694e9c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16ea8ec6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19ce60eb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d81f9b0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4087a4ed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf8e3cb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dcadc5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34666193_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43287d45_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bdf3cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f67e536_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a24a68_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70a7ca2d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60a3a2f1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b01ce4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d6ef154_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6844aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a32834_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a35592_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4edf7ce7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d27e7d7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f5bb98_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f69eacc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ca1a92c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203d0ccf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21501a8e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17844591_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@682deadf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68c94cac_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f31f725_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@745d88f0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36351c10_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70267aed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb65dcf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef9e914_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a37447_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3522a350_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27711d03_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71780c7a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@372deac7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@742bb7c3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f9200c1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d04200c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@732ec847_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e05ccaa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d78c7a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@323e06d6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209b168e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5892ca19_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75f98634_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c394d72_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2698e12b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a332ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74b2f3a3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4572658e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c5c0f4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@504508c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e10708b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a66507f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e24f84d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0d2c3b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24ab200a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c8caff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3542db_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b862c35_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2df22a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bb75285_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d3e635_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d50508c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30749e2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6111ca1b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c673044_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73509cae_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25cf08a0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23bceb22_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4119fcd2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73618ebf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@126692bf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6785a5c4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@139cc042_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@668df6a5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d6ad98b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63cfd8c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a3ba0ce_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e1fd7e6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72303153_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e30447e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@755a61a1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cbc6e79_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f379e1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e6bb552_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29a67541_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@655ec382_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63e0e691_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@469f42ec_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d25fd4b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776f8e81_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14ac87ed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20877c3d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f8a4881_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2443262e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b411376_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3933a3df_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@277f7f7d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c6c6385_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@644151f7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c32d2e1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b02d581_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a4ec44f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317c0c87_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@329a5e94_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1838580f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1050ba68_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e183984_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ce5501_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cae84c1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@521a8110_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6129d84b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40257fa5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bcd5e3a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@82bd367_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d6ffbeb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62fc4b22_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72b09bf5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@146c3524_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@341676d8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8ebda4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f1fde3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5232d445_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@782d68b2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2db2f46f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@533bd5d3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf6fba8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3241b23b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b7e9da_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7892ba6c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5808a399_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@359785e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4514d632_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33be35b1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6404aacb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bf52c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d5f0d6a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@690ee750_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56219c6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6df7aaba_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca13300_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d28e86_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28d8a487_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a14b629_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ed9e8b2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28617fff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@347d4d1b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f95327_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e2cd7c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77580067_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@239b4a2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d8293b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32cfaecd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f02fdd7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@169420bc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22444790_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41004927_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@606ac7f8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cf243bf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13b7f057_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a7e7cdc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23b730fa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5139ab77_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56455917_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-ds/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e219e4f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26da254f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3854efb3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f987d3b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@474ff4cb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e3d64b1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@636c2ca_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e0c09b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe6236d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39889bc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e64def2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50bba323_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ee976_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d5f4f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26e37d53_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b90555c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cf083e9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4af18a39_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4719aa54_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@722b7e17_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@296ae596_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@310f7258_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73cf0645_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e02c61_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6558e1f4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f8a6eac_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c745254_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aa463bd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7de381_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30f9e274_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57b578f5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10cb522d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6895ca9c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20327f3b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61f90cba_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7628fee0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d688a6d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18a5b0f5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ae91cda_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f40f52_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36a03aa2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@241cf672_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@544ec36c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc76a78_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6e9c50_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e066819_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce05499_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64438982_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e5c2f62_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28bca545_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b1fa704_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@452970b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6041b2cd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a1eacc1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317e4a54_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13c56add_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@325f70da_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d4f832e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39184d71_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34c67865_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc33513_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5179a9e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f6600c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@493529c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@729073ad_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6346d49_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5caf0468_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cbb1763_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f69d4af_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50bb063b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66b2d8cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b5f401d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46ff72be_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd5ca37_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f33df7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@407764a6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f0e7d3c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f296c7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a9223ef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2ab271_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f3c1439_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d3ab177_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@733c064_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@134fdf8e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@282500d4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@592fe01b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b97b00_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d173394_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4208c173_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fd8fa79_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@502d4549_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19acf5c1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@220b9140_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50aa28a5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@548ebdab_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f613a8a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77860eb1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4364069f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cb53cde_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@466e1a4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b58e9d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3367e4c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5128bccb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@378051a2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64f44541_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c293785_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f33fd0a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@984a530_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b0b99d2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f44b2fa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b757369_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a01e62_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13fa1653_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52117a66_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65805cf2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@186905f9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ccc2d1b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b8fe997_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ca65982_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b28ef31_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209218cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d974e83_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d1008b6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1431066a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@128a61fb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23a4a8ee_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fdcdbed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f02ac1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c87f6cd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e50607_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca9493b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1268c505_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28447643_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@278bc46_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c4d6233_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b30fe4e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5389d402_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4281e2a9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74d4351b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7b6cc2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d85c27_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67975c5d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bab5775_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@543a24b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@684d64dc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78226aed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c63d448_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1933eb20_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ccacbd6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21652c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c08e64a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77bc6367_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@441ab30c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@529853cb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6ccb3a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@464af7ae_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cec904f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788191b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d006efd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53901059_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b57b3fb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44b369c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50ab7c22_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@678783f8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7927de3c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e8b3ff0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58b27f17_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aa844be_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@152bf489_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f46e4e6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a2cdbc3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b26b26_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5811d718_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d346dfb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6ab369_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d65c04f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@242fd06e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d3e3265_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18a1fb61_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@411d33c0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c54fc2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62675319_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75f5a4c3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@378d71d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fb13895_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53e5f8e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9e07633_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@782e1265_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@761137d6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@417bd1ee_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d270ff2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23dd1ff4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e7baf04_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49b4914d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e1cc7e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@594d6d60_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eff6ba9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23e5beca_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8a397fd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b97fb62_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@737e481b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189b26c1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49081a79_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ef022d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2908666f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@502014e9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-rplc-combo-lim/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39364f8b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e6af08_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3097bd1b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b2c41f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e0ed0b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11b2e3f3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32a132a5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4db7f552_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7df55893_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c337f91_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@670ad0e2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db4f4a0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9ca1c75_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21d24b6d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fd2124b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d534b6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd37f66_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6051688b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d5a323_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e723498_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ac47c12_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75143734_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674797e7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@350fab9e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f79b8fc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f09c487_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1820d5fb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1169745c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e895b5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bedf83_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@739c6f70_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15347fa9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d8ea4f2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@470a5fdf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cec440e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1934d5b0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dba18a6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79791607_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2119eb3c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b864af_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@141540ef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b6d3b33_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1515c712_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18e5873a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48423ddd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bd241a9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea6a9aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a7b806b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b4e9042_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58552abe_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2afdfca9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56ed913a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15288350_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a1722ab_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@437383cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f0ce1aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@146a2420_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b1ea8da_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35618b82_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64da0cc7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17bccee7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cbd85c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f98ecbf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7620ee3e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42dffe64_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@260ace3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227f9420_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4d2882_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65774651_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31507f74_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c1e064e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f1806ed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5428362c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43c0201c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cc1f22d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@578702db_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19ae6e4a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37c9406e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e8abbf1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5214f8e3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@345ed59e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354bfa72_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@508633b6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34f70a21_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@431cf57e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d465152_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1161cb09_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33e8a77_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e32de1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ca2abd3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@205200d6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7224307a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fcaf921_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ae9441a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b9e8d3d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12aa4ccf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4769c74a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248095fa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56afe250_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@218a84fe_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c5058a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f507cdc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac6da7a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c7027df_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77be888f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@607263d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@917a14a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f24d113_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c509b1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68b307c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f3590b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2656158b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b447e14_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@739d656_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4815172b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@387d441f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@513c7afb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a45ae2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f4cc4c3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ba4a7c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@619d1747_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e289b47_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@383f0880_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201bd5da_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f4fb2be_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3336cf2b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77c79c38_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4b01f6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e84f5ee_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7700073e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@498fbe2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51cbfa19_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67418191_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2510ac6c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c4e9430_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@268bb0ca_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18b40e13_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18bca60_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60f7fdf8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@671af70a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@369434a4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c2a1843_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c3ba6f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72201c95_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6170c4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@232875eb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a55654f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@526cfe9e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f4d3db3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a8e192_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c9b22ef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f78edf7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@301dbc21_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16f9222f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ccf7f1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bbc9c77_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fda5e4a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@91e641a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c0866d8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74ca3b46_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@375ed8b4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c623d81_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49980dea_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a54cbc7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747c064a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a9c4b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f3b45f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74481be0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34646b3c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d6f0e8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46550bd7_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54f7206f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45153b45_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@639b9ff5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4094a7b8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@607d49f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f12ca43_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc4afde_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73015b49_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@430c97fc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2f7969_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5247c2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@da14336_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44dbdeed_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3531e0cb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@389df894_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10e5cf68_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a5c32b6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71a7f527_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e199a16_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e49ea5b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@295d5646_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7788925f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30515ef1_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6ccc31_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ff9ef2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de3e9ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57587b51_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b640a6b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a8b8eb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52b0ab13_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61d5b011_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24db4749_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@142da0ef_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a47a1d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@604d2d26_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36e68598_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@383c5d44_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e78108a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7be5ba_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23423599_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c58480a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43330e4a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b5c513_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20f129ee_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a783910_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77f653aa_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14076302_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbf9512_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197b37a5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46ce902c_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48cbed38_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d38dddc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16479b86_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@242235b4_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e4c5968_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b1d162_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2016312d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cff9939_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3aab5707_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@160388df_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2762a528_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@589e1050_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dbf0a8d_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5dc2bb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ec23874_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@411220a3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2160d055_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a9396a3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1640df53_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e28d144_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@623c2558_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a4ce183_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f8f8621_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e12bc78_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f3e05b8_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fb37b96_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59e466e6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db71a98_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e6a822_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48007496_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b9c90ff_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c6f52ca_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c2c082a_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c2f07cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@535fe901_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ac7b84_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7a5862_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cfd2acf_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57442fb6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50d60f08_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25757832_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69eacdad_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@618e99d2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55015e7e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37047fc0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2068cbc0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@661c2be5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13b60317_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38c38e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4daf6750_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11ba6b67_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aed4a03_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b8f3e9_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c25bd0_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db0579b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57971e56_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4784bd63_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c30a098_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba2f9e5_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fde1109_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7679b5cb_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44804750_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65b02e39_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4de77aae_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@396508fe_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c1c2e2_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79eb4a75_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba2330e_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4143c41f_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41231469_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bea14cc_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a3dd6f3_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34eeaf1b_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58b44f97_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@681a1b6_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b1bbb93_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@412d98fd_ARCHIVE_LOCATION">/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MK/ip-repo/audio_fader_1.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK_125.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK_125.FREQ_HZ" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f6ad8596"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fe99caf8"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="b914d83e"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="014232b9"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0749a154"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

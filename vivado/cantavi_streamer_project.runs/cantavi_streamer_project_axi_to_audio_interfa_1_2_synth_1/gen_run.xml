@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="cantavi_streamer_project_axi_to_audio_interfa_1_2_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1551208666">
+  <File Type="REPORTS-TCL" Name="cantavi_streamer_project_axi_to_audio_interfa_1_2_reports.tcl"/>
+  <File Type="PA-TCL" Name="cantavi_streamer_project_axi_to_audio_interfa_1_2.tcl"/>
+  <File Type="RDS-DCP" Name="cantavi_streamer_project_axi_to_audio_interfa_1_2.dcp"/>
+  <File Type="RDS-RDS" Name="cantavi_streamer_project_axi_to_audio_interfa_1_2.vds"/>
+  <File Type="RDS-UTIL-PB" Name="cantavi_streamer_project_axi_to_audio_interfa_1_2_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="cantavi_streamer_project_axi_to_audio_interfa_1_2_utilization_synth.rpt"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/cantavi_streamer_project_axi_to_audio_interfa_1_2">
+    <File Path="$PSRCDIR/sources_1/bd/cantavi_streamer_project/ip/cantavi_streamer_project_axi_to_audio_interfa_1_2/cantavi_streamer_project_axi_to_audio_interfa_1_2.xci">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="cantavi_streamer_project_axi_to_audio_interfa_1_2"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/cantavi_streamer_project_axi_to_audio_interfa_1_2">
+    <File Path="$PSRCDIR/sources_1/bd/cantavi_streamer_project/ip/cantavi_streamer_project_axi_to_audio_interfa_1_2/cantavi_streamer_project_axi_to_audio_interfa_1_2.xci">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="cantavi_streamer_project_axi_to_audio_interfa_1_2"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER org_audio2eth_interleaved_packetizer
+	OPTION supported_peripherals = (org_audio2eth_interleaved_packetizer);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = org_audio2eth_interleaved_packetizer;
+END DRIVER

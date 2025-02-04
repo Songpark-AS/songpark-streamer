@@ -1,0 +1,901 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Mar 21 23:24:11 2023
+| Host         : JAIRE running 64-bit Arch Linux
+| Command      : report_clock_utilization -file cantavi_streamer_project_wrapper_clock_utilization_routed.rpt
+| Design       : cantavi_streamer_project_wrapper
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+--------------------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Global Clock Resources
+3. Global Clock Source Details
+4. Local Clock Details
+5. Clock Regions: Key Resource Utilization
+6. Clock Regions : Global Clock Summary
+7. Device Cell Placement Summary for Global Clock g0
+8. Device Cell Placement Summary for Global Clock g1
+9. Device Cell Placement Summary for Global Clock g2
+10. Device Cell Placement Summary for Global Clock g3
+11. Device Cell Placement Summary for Global Clock g4
+12. Device Cell Placement Summary for Global Clock g5
+13. Device Cell Placement Summary for Global Clock g6
+14. Device Cell Placement Summary for Global Clock g7
+15. Device Cell Placement Summary for Global Clock g8
+16. Device Cell Placement Summary for Global Clock g9
+17. Device Cell Placement Summary for Global Clock g10
+18. Device Cell Placement Summary for Global Clock g11
+19. Device Cell Placement Summary for Global Clock g12
+20. Device Cell Placement Summary for Global Clock g13
+21. Device Cell Placement Summary for Global Clock g14
+22. Device Cell Placement Summary for Global Clock g15
+23. Device Cell Placement Summary for Global Clock g16
+24. Device Cell Placement Summary for Global Clock g17
+25. Device Cell Placement Summary for Global Clock g18
+26. Device Cell Placement Summary for Global Clock g19
+27. Clock Region Cell Placement per Global Clock: Region X0Y0
+28. Clock Region Cell Placement per Global Clock: Region X1Y0
+29. Clock Region Cell Placement per Global Clock: Region X0Y1
+30. Clock Region Cell Placement per Global Clock: Region X1Y1
+31. Clock Region Cell Placement per Global Clock: Region X0Y2
+32. Clock Region Cell Placement per Global Clock: Region X1Y2
+
+1. Clock Primitive Utilization
+------------------------------
+
++----------+------+-----------+-----+--------------+--------+
+| Type     | Used | Available | LOC | Clock Region | Pblock |
++----------+------+-----------+-----+--------------+--------+
+| BUFGCTRL |   20 |        32 |   0 |            0 |      0 |
+| BUFH     |    0 |        72 |   0 |            0 |      0 |
+| BUFIO    |    0 |        16 |   0 |            0 |      0 |
+| BUFMR    |    0 |         8 |   0 |            0 |      0 |
+| BUFR     |    0 |        16 |   0 |            0 |      0 |
+| MMCM     |    2 |         4 |   0 |            0 |      0 |
+| PLL      |    0 |         4 |   0 |            0 |      0 |
++----------+------+-----------+-----+--------------+--------+
+
+
+2. Global Clock Resources
+-------------------------
+
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                         | Driver Pin                                                                                                                              | Net                                                                                                                                     |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 6 |        9894 |               0 |        8.000 | clk_mmcm_out                                  | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_bufg_inst/O                                                                  | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                                                                      |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 6 |        9392 |               0 |       10.000 | clk_fpga_0                                    | cantavi_streamer_project_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O                                                | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                                                                          |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 3 |        2886 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG_inst/O                                         | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG                                                |
+| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 3 |        1746 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out_BUFG_inst/O                                  | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out                                              |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 3 |         208 |               0 |        8.000 | phy_rx_clk_0                                  | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/clk_bufg/O | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk |
+| g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y7  | n/a          |                 2 |          64 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/Mem_reg_i_1__2/O                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk                                               |
+| g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3/O                                                     | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready    |
+| g7        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y8  | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__1/O                                                  | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready    |
+| g8        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__0/O                                                  | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready    |
+| g9        | src9      | BUFG/O          | None       | BUFGCTRL_X0Y10 | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__3/O                                                  | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready    |
+| g10       | src10     | BUFG/O          | None       | BUFGCTRL_X0Y9  | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__2/O                                                  | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready    |
+| g11       | src11     | BUFG/O          | None       | BUFGCTRL_X0Y11 | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__4/O                                                  | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready    |
+| g12       | src12     | BUFG/O          | None       | BUFGCTRL_X0Y13 | n/a          |                 2 |          32 |               0 |              |                                               | cantavi_streamer_project_i/FILTER_IIR_0/counter_reg[0]_i_3__0/O                                                                         | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready                           |
+| g13       | src13     | BUFG/O          | None       | BUFGCTRL_X0Y12 | n/a          |                 1 |          32 |               0 |              |                                               | cantavi_streamer_project_i/FILTER_IIR_0/counter_reg[0]_i_3/O                                                                            | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready                           |
+| g14       | src14     | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |           2 |               3 |              |                                               | adau1761_bclk_0_IBUF_BUFG_inst/O                                                                                                        | adau1761_bclk_0_IBUF_BUFG                                                                                                               |
+| g15       | src15     | BUFG/O          | None       | BUFGCTRL_X0Y15 | n/a          |                 1 |           1 |               0 |       10.000 | clk_out2_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/clkout2_buf/O                                                                                 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out2                                                                                      |
+| g16       | src15     | BUFG/O          | None       | BUFGCTRL_X0Y14 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/clkf_buf/O                                                                                    | cantavi_streamer_project_i/clk_wiz_0/inst/clkfbout_buf_cantavi_streamer_project_clk_wiz_0_0                                             |
+| g17       | src0      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 1 |           1 |               0 |        8.000 | clk90_mmcm_out                                | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk90_bufg_inst/O                                                                | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int                                                                       |
+| g18       | src15     | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 1 |           0 |               2 |       81.375 | clk_out1_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/clkout1_buf/O                                                                                 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1                                                                                      |
+| g19       | src16     | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 1 |           0 |               1 |          n/a | n/a                                           | cantavi_streamer_project_i/org_audio2eth_interl_0/U0/clk_bufg_inst/O                                                                    | cantavi_streamer_project_i/org_audio2eth_interl_0/U0/tsync_out                                                                          |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+3. Global Clock Source Details
+------------------------------
+
++-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                  | Driver Pin                                                                                                                                                | Net                                                                                                                                                       |
++-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| src0      | g17       | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |               8.000 | clk90_mmcm_out                                | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_mmcm_inst/CLKOUT1                                                                              | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk90_mmcm_out                                                                                     |
+| src0      | g0        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |               8.000 | clk_mmcm_out                                  | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_mmcm_inst/CLKOUT0                                                                              | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_mmcm_out                                                                                       |
+| src1      | g1        | PS7/FCLKCLK[0]      | PS7_X0Y0   | PS7_X0Y0        | X0Y2         |           1 |               0 |              10.000 | clk_fpga_0                                    | cantavi_streamer_project_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]                                                                                     | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                                                                               |
+| src2      | g2        | LUT3/O              | None       | SLICE_X50Y46    | X1Y0         |           1 |               0 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/U0n_0_7852_BUFG_inst_i_1/O                                                    | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/U0n_0_7852_BUFG_inst_n_0                                                      |
+| src3      | g3        | LUT2/O              | None       | SLICE_X50Y46    | X1Y0         |           1 |               0 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/newsample_125_out_BUFG_inst_i_1/O                                             | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/newsample_125_out                                                             |
+| src4      | g4        | IBUF/O              | IOB_X0Y43  | IOB_X0Y43       | X0Y0         |           1 |               0 |               8.000 | phy_rx_clk_0                                  | phy_rx_clk_0_IBUF_inst/O                                                                                                                                  | phy_rx_clk_0_IBUF                                                                                                                                         |
+| src5      | g5        | LUT3/O              | None       | SLICE_X50Y46    | X1Y0         |           1 |               0 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/Mem_reg_i_5/O                                                                 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0/newsample_in_div2_reg_0                                                       |
+| src6      | g6        | FDCE/Q              | None       | SLICE_X47Y12    | X0Y0         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg/Q | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg_0 |
+| src7      | g7        | FDCE/Q              | None       | SLICE_X36Y23    | X0Y0         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg/Q | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg_0 |
+| src8      | g8        | FDCE/Q              | None       | SLICE_X47Y23    | X0Y0         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg/Q | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg_0 |
+| src9      | g9        | FDCE/Q              | None       | SLICE_X40Y20    | X0Y0         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg/Q | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg_0 |
+| src10     | g10       | FDCE/Q              | None       | SLICE_X44Y12    | X0Y0         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg/Q | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg_0 |
+| src11     | g11       | FDCE/Q              | None       | SLICE_X44Y10    | X0Y0         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg/Q | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg_0 |
+| src12     | g12       | FDCE/Q              | None       | SLICE_X41Y94    | X0Y1         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg/Q                        | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg_0                        |
+| src13     | g13       | FDCE/Q              | None       | SLICE_X43Y99    | X0Y1         |           1 |               2 |                     |                                               | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg/Q                        | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg_0                        |
+| src14     | g14       | IBUF/O              | IOB_X0Y21  | IOB_X0Y21       | X0Y0         |           1 |               0 |                     |                                               | adau1761_bclk_0_IBUF_inst/O                                                                                                                               | adau1761_bclk_0_IBUF                                                                                                                                      |
+| src15     | g18       | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              81.375 | clk_out1_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0                                                                                           | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1_cantavi_streamer_project_clk_wiz_0_0                                                                   |
+| src15     | g15       | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              10.000 | clk_out2_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1                                                                                           | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out2_cantavi_streamer_project_clk_wiz_0_0                                                                   |
+| src15     | g16       | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              10.000 | clkfbout_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT                                                                                          | cantavi_streamer_project_i/clk_wiz_0/inst/clkfbout_cantavi_streamer_project_clk_wiz_0_0                                                                   |
+| src16     | g19       | FDRE/Q              | None       | SLICE_X109Y73   | X1Y1         |           2 |              49 |                     |                                               | cantavi_streamer_project_i/ZedCodec/i2s_receiver_from_codec_adc_0/inst/next_adc_sample_reg/Q                                                              | cantavi_streamer_project_i/ZedCodec/i2s_receiver_from_codec_adc_0/inst/next_adc_sample                                                                    |
++-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+4. Local Clock Details
+----------------------
+
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                                                                     | Net                                                                                                                                            |
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------||
+| 0        | FDCE/Q          | None       | SLICE_X36Y101/AFF | X0Y2         |          32 |               2 |              |       | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg/Q             | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/Mul_Ready                           - Static -
+| 1        | FDCE/Q          | None       | SLICE_X38Y105/AFF | X0Y2         |          32 |               2 |              |       | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg/Q             | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/Mul_Ready                           - Static -
+| 2        | FDCE/Q          | None       | SLICE_X42Y111/AFF | X0Y2         |          32 |               2 |              |       | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg/Q             | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/Mul_Ready                           - Static -
+| 3        | FDCE/Q          | None       | SLICE_X40Y102/AFF | X0Y2         |          32 |               2 |              |       | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg/Q             | cantavi_streamer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/Mul_Ready                           - Static -
+| 4        | FDCE/Q          | None       | SLICE_X53Y25/AFF  | X1Y0         |          32 |               0 |              |       | cantavi_streamer_project_i/time_sync_block_0/U0/mvn_avg_inst/o_data_valid_reg/Q                                                                | cantavi_streamer_project_i/time_sync_block_0/U0/mvn_avg_inst/o_data_valid                                                                      - Static -
+| 5        | FDCE/Q          | None       | SLICE_X75Y49/AFF  | X1Y0         |          16 |               2 |              |       | cantavi_streamer_project_i/org_audio2eth_interl_0/U0/tlast_reg/Q                                                                               | cantavi_streamer_project_i/org_audio2eth_interl_0/U0/m_audio_payload_axis_tlast                                                                - Static -
+| 6        | FDCE/Q          | None       | SLICE_X61Y46/AFF  | X1Y0         |          16 |               3 |              |       | cantavi_streamer_project_i/time_sync_block_0/U0/tlast_reg/Q                                                                                    | cantavi_streamer_project_i/time_sync_block_0/U0/m_time_sync_axis_tlast                                                                         - Static -
+| 7        | FDRE/Q          | None       | SLICE_X109Y73/DFF | X1Y1         |           1 |              50 |              |       | cantavi_streamer_project_i/ZedCodec/i2s_receiver_from_codec_adc_0/inst/next_adc_sample_reg/Q                                                   | cantavi_streamer_project_i/ZedCodec/i2s_receiver_from_codec_adc_0/inst/next_adc_sample                                                         - Static -
+| 8        | FDRE/Q          | None       | SLICE_X38Y69/BFF  | X0Y1         |           1 |               3 |              |       | cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/pkt_in_axis_arb_mux_inst/m_udp_payload_axis_tlast_reg_reg/Q                  | cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/pkt_in_axis_arb_mux_inst/DIPADIP[0]                                          - Static -
+| 9        | FDRE/Q          | None       | SLICE_X22Y33/DFF  | X0Y0         |           1 |              22 |              |       | cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_udp_payload_axis_tlast_reg_reg/Q | cantavi_streamer_project_i/eth_udp_axi_arp_stack_0/inst/core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_udp_payload_axis_tlast_reg_reg_0 - Static -
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------||
+* Local Clocks in this context represents only clocks driven by non-global buffers
+** Clock Loads column represents the clock pin loads (pin count)
+*** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+5. Clock Regions: Key Resource Utilization
+------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E2   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |   12 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    5 |    50 |    6 |    50 | 5918 |  2500 | 2539 |  1000 |    0 |    60 |   26 |    30 |    0 |    60 |
+| X1Y0              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 5837 |  3200 |  727 |   850 |    0 |    60 |   29 |    30 |    0 |    40 |
+| X0Y1              |    6 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3408 |  1200 | 1063 |   400 |    0 |    20 |   10 |    10 |    0 |    20 |
+| X1Y1              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4044 |  2600 |  373 |   850 |    1 |    60 |   17 |    30 |    6 |    40 |
+| X0Y2              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  789 |  1200 |  227 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2147 |  2600 |  154 |   850 |    1 |    60 |    0 |    30 |   22 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+6. Clock Regions : Global Clock Summary
+---------------------------------------
+
+All Modules
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  5 |  5 |
+| Y1 |  6 |  6 |
+| Y0 | 12 |  5 |
++----+----+----+
+
+
+7. Device Cell Placement Summary for Global Clock g0
+----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock        | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                |
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------+
+| g0        | BUFG/O          | n/a               | clk_mmcm_out |       8.000 | {0.000 4.000} |        9778 |        0 |              0 |        0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out |
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+-------+
+|    | X0    | X1    |
++----+-------+-------+
+| Y2 |    12 |   342 |
+| Y1 |   422 |  1651 |
+| Y0 |  3310 |  4041 |
++----+-------+-------+
+
+
+8. Device Cell Placement Summary for Global Clock g1
+----------------------------------------------------
+
++-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                            |
++-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------------------+
+| g1        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |        9391 |        0 |              0 |        0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0 |
++-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+-------+
+|    | X0    | X1    |
++----+-------+-------+
+| Y2 |   630 |   261 |
+| Y1 |  2953 |  1553 |
+| Y0 |  2282 |  1712 |
++----+-------+-------+
+
+
+9. Device Cell Placement Summary for Global Clock g2
+----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                      |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------+
+| g2        | BUFG/O          | n/a               |       |             |               |         838 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+------+
+|    | X0 | X1   |
++----+----+------+
+| Y2 |  0 |  453 |
+| Y1 |  0 |  284 |
+| Y0 |  0 |  101 |
++----+----+------+
+
+
+10. Device Cell Placement Summary for Global Clock g3
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                        |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------+
+| g3        | BUFG/O          | n/a               |       |             |               |        1746 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+-------+
+|    | X0 | X1    |
++----+----+-------+
+| Y2 |  0 |  1156 |
+| Y1 |  0 |   577 |
+| Y0 |  0 |    13 |
++----+----+-------+
+
+
+11. Device Cell Placement Summary for Global Clock g4
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock        | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                     |
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| g4        | BUFG/O          | n/a               | phy_rx_clk_0 |       8.000 | {0.000 4.000} |         208 |        0 |              0 |        0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk |
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y2 |    1 |  0 |
+| Y1 |    4 |  0 |
+| Y0 |  203 |  0 |
++----+------+----+
+
+
+12. Device Cell Placement Summary for Global Clock g5
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                       |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+| g5        | BUFG/O          | n/a               |       |             |               |          64 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y2 |  0 |  18 |
+| Y1 |  0 |  46 |
+| Y0 |  0 |   0 |
++----+----+-----+
+
+
+13. Device Cell Placement Summary for Global Clock g6
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| g6        | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   0 |  0 |
+| Y1 |  32 |  0 |
+| Y0 |   0 |  0 |
++----+-----+----+
+
+
+14. Device Cell Placement Summary for Global Clock g7
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| g7        | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   0 |  0 |
+| Y1 |  32 |  0 |
+| Y0 |   0 |  0 |
++----+-----+----+
+
+
+15. Device Cell Placement Summary for Global Clock g8
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| g8        | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   0 |  0 |
+| Y1 |   0 |  0 |
+| Y0 |  32 |  0 |
++----+-----+----+
+
+
+16. Device Cell Placement Summary for Global Clock g9
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| g9        | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   0 |  0 |
+| Y1 |   0 |  0 |
+| Y0 |  32 |  0 |
++----+-----+----+
+
+
+17. Device Cell Placement Summary for Global Clock g10
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| g10       | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   0 |  0 |
+| Y1 |   0 |  0 |
+| Y0 |  32 |  0 |
++----+-----+----+
+
+
+18. Device Cell Placement Summary for Global Clock g11
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+| g11       | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   0 |  0 |
+| Y1 |   0 |  0 |
+| Y0 |  32 |  0 |
++----+-----+----+
+
+
+19. Device Cell Placement Summary for Global Clock g12
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                           |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------------------------+
+| g12       | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |   8 |  0 |
+| Y1 |  24 |  0 |
+| Y0 |   0 |  0 |
++----+-----+----+
+
+
+20. Device Cell Placement Summary for Global Clock g13
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                           |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------------------------+
+| g13       | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+----+
+|    | X0  | X1 |
++----+-----+----+
+| Y2 |  32 |  0 |
+| Y1 |   0 |  0 |
+| Y0 |   0 |  0 |
++----+-----+----+
+
+
+21. Device Cell Placement Summary for Global Clock g14
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                       |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------+
+| g14       | BUFG/O          | n/a               |       |             |               |           4 |        1 |              0 |        0 | adau1761_bclk_0_IBUF_BUFG |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  0 |  4 |
+| Y0 |  1 |  0 |
++----+----+----+
+
+
+22. Device Cell Placement Summary for Global Clock g15
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                         | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                |
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------+
+| g15       | BUFG/O          | n/a               | clk_out2_cantavi_streamer_project_clk_wiz_0_0 |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out2 |
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  0 |  1 |
++----+----+----+
+
+
+23. Device Cell Placement Summary for Global Clock g16
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                         | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                         |
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------+
+| g16       | BUFG/O          | n/a               | clkfbout_cantavi_streamer_project_clk_wiz_0_0 |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | cantavi_streamer_project_i/clk_wiz_0/inst/clkfbout_buf_cantavi_streamer_project_clk_wiz_0_0 |
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  1 |  0 |
++----+----+----+
+
+
+24. Device Cell Placement Summary for Global Clock g17
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock          | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                               |
++-----------+-----------------+-------------------+----------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------+
+| g17       | BUFG/O          | n/a               | clk90_mmcm_out |       8.000 | {2.000 6.000} |           1 |        0 |              0 |        0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int |
++-----------+-----------------+-------------------+----------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  1 |  0 |
++----+----+----+
+
+
+25. Device Cell Placement Summary for Global Clock g18
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                         | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                |
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------------------+
+| g18       | BUFG/O          | n/a               | clk_out1_cantavi_streamer_project_clk_wiz_0_0 |      81.375 | {0.000 40.688} |           1 |        1 |              0 |        0 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1 |
++-----------+-----------------+-------------------+-----------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  2 |  0 |
++----+----+----+
+
+
+26. Device Cell Placement Summary for Global Clock g19
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                            |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------------------+
+| g19       | BUFG/O          | n/a               |       |             |               |           0 |        1 |              0 |        0 | cantavi_streamer_project_i/org_audio2eth_interl_0/U0/tsync_out |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  1 |  0 |
++----+----+----+
+
+
+27. Clock Region Cell Placement per Global Clock: Region X0Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        3310 |               0 | 3277 |      1 |   26 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                                                                      |
+| g1        | n/a   | BUFG/O          | None       |        2282 |               0 | 2282 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                                                                          |
+| g4        | n/a   | BUFG/O          | None       |         203 |               0 |  197 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk |
+| g8        | n/a   | BUFG/O          | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready    |
+| g9        | n/a   | BUFG/O          | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready    |
+| g10       | n/a   | BUFG/O          | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready    |
+| g11       | n/a   | BUFG/O          | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready    |
+| g14       | n/a   | BUFG/O          | None       |           0 |               1 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | adau1761_bclk_0_IBUF_BUFG                                                                                                               |
+| g16       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | cantavi_streamer_project_i/clk_wiz_0/inst/clkfbout_buf_cantavi_streamer_project_clk_wiz_0_0                                             |
+| g17       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int                                                                       |
+| g18       | n/a   | BUFG/O          | None       |           0 |               2 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1                                                                                      |
+| g19       | n/a   | BUFG/O          | None       |           0 |               1 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/org_audio2eth_interl_0/U0/tsync_out                                                                          |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+28. Clock Region Cell Placement per Global Clock: Region X1Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        4041 |               0 | 4010 |      2 |   29 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                         |
+| g1        | n/a   | BUFG/O          | None       |        1712 |               0 | 1712 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                             |
+| g2        | n/a   | BUFG/O          | None       |         101 |               0 |  101 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG   |
+| g3        | n/a   | BUFG/O          | None       |          13 |               0 |   13 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out |
+| g15       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out2                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+29. Clock Region Cell Placement per Global Clock: Region X0Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         422 |               0 |  412 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                                                                      |
+| g1        | n/a   | BUFG/O          | None       |        2953 |               0 | 2905 |     48 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                                                                          |
+| g4        | n/a   | BUFG/O          | None       |           4 |               0 |    3 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk |
+| g6        | n/a   | BUFG/O          | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready    |
+| g7        | n/a   | BUFG/O          | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready    |
+| g12       | n/a   | BUFG/O          | None       |          24 |               0 |   24 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+30. Clock Region Cell Placement per Global Clock: Region X1Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        1651 |               0 | 1630 |      0 |   18 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                         |
+| g1        | n/a   | BUFG/O          | None       |        1553 |               0 | 1553 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                             |
+| g2        | n/a   | BUFG/O          | None       |         284 |               0 |  284 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG   |
+| g3        | n/a   | BUFG/O          | None       |         577 |               0 |  531 |     40 |    0 |   6 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out |
+| g5        | n/a   | BUFG/O          | None       |          46 |               0 |   44 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk  |
+| g14       | n/a   | BUFG/O          | None       |           2 |               2 |    4 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | adau1761_bclk_0_IBUF_BUFG                                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+31. Clock Region Cell Placement per Global Clock: Region X0Y2
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          12 |               0 |  10 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                                                                      |
+| g1        | n/a   | BUFG/O          | None       |         630 |               0 | 611 |     18 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                                                                          |
+| g4        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk |
+| g12       | n/a   | BUFG/O          | None       |           8 |               0 |   8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready                           |
+| g13       | n/a   | BUFG/O          | None       |          32 |               0 |  32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready                           |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+32. Clock Region Cell Placement per Global Clock: Region X1Y2
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         342 |               0 |  340 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out                         |
+| g1        | n/a   | BUFG/O          | None       |         261 |               0 |  260 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0                             |
+| g2        | n/a   | BUFG/O          | None       |         453 |               0 |  453 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG   |
+| g3        | n/a   | BUFG/O          | None       |        1156 |               0 | 1078 |     56 |    0 |  22 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out |
+| g5        | n/a   | BUFG/O          | None       |          18 |               0 |   16 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y1 [get_cells cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/clk_bufg]
+set_property LOC BUFGCTRL_X0Y4 [get_cells cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk90_bufg_inst]
+set_property LOC BUFGCTRL_X0Y0 [get_cells cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_bufg_inst]
+set_property LOC BUFGCTRL_X0Y16 [get_cells cantavi_streamer_project_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG]
+set_property LOC BUFGCTRL_X0Y3 [get_cells cantavi_streamer_project_i/org_audio2eth_interl_0/U0/clk_bufg_inst]
+set_property LOC BUFGCTRL_X0Y14 [get_cells cantavi_streamer_project_i/clk_wiz_0/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y15 [get_cells cantavi_streamer_project_i/clk_wiz_0/inst/clkout2_buf]
+set_property LOC BUFGCTRL_X0Y2 [get_cells cantavi_streamer_project_i/clk_wiz_0/inst/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y12 [get_cells cantavi_streamer_project_i/FILTER_IIR_0/counter_reg[0]_i_3]
+set_property LOC BUFGCTRL_X0Y13 [get_cells cantavi_streamer_project_i/FILTER_IIR_0/counter_reg[0]_i_3__0]
+set_property LOC BUFGCTRL_X0Y7 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/Mem_reg_i_1__2]
+set_property LOC BUFGCTRL_X0Y6 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y5 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y11 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__4]
+set_property LOC BUFGCTRL_X0Y9 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__2]
+set_property LOC BUFGCTRL_X0Y10 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__3]
+set_property LOC BUFGCTRL_X0Y19 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__0]
+set_property LOC BUFGCTRL_X0Y8 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__1]
+set_property LOC BUFGCTRL_X0Y18 [get_cells cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3]
+set_property LOC BUFGCTRL_X0Y17 [get_cells adau1761_bclk_0_IBUF_BUFG_inst]
+
+# Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X0Y11 [get_cells tsync_out_0_OBUF_inst]
+set_property LOC IOB_X0Y7 [get_cells bclk1_0_OBUF_inst]
+set_property LOC IOB_X0Y20 [get_cells adau1761_mclk_OBUF_inst]
+
+# Location of clock ports
+set_property LOC IOB_X0Y21 [get_ports adau1761_bclk_0]
+set_property LOC IOB_X0Y26 [get_ports clk_100_in]
+set_property LOC IOB_X0Y43 [get_ports phy_rx_clk_0]
+
+# Clock net "cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk" driven by instance "cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/clk_bufg" located at site "BUFGCTRL_X0Y1"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_ssio_ddr_inst/output_clk}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int" driven by instance "cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk90_bufg_inst" located at site "BUFGCTRL_X0Y4"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_90_int}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out" driven by instance "cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_bufg_inst" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_125_out}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0" driven by instance "cantavi_streamer_project_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1" driven by instance "cantavi_streamer_project_i/clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y2"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=adau1761_mclk_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready" driven by instance "cantavi_streamer_project_i/FILTER_IIR_0/counter_reg[0]_i_3" located at site "BUFGCTRL_X0Y12"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready" driven by instance "cantavi_streamer_project_i/FILTER_IIR_0/counter_reg[0]_i_3__0" located at site "BUFGCTRL_X0Y13"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/FILTER_IIR_0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/Mem_reg_i_1__2" located at site "BUFGCTRL_X0Y7"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/read_Odd_FIFOClk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out_BUFG_inst" located at site "BUFGCTRL_X0Y6"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/newsample_125_out}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG_inst" located at site "BUFGCTRL_X0Y5"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/eth_to_audio_plc_com_0/U0n_0_7852_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__4" located at site "BUFGCTRL_X0Y11"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/Mul_Ready}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__2" located at site "BUFGCTRL_X0Y9"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/Mul_Ready}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__3" located at site "BUFGCTRL_X0Y10"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/Mul_Ready}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__0" located at site "BUFGCTRL_X0Y19"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/Mul_Ready}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3__1" located at site "BUFGCTRL_X0Y8"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/Mul_Ready}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready" driven by instance "cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/counter_reg[0]_i_3" located at site "BUFGCTRL_X0Y18"
+#startgroup
+create_pblock {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready}
+add_cells_to_pblock [get_pblocks  {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready"}]]]
+resize_pblock [get_pblocks {CLKAG_cantavi_streamer_project_i/AudioProcessingChannel/FILTER_IIR_1/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/Mul_Ready}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "adau1761_bclk_0_IBUF_BUFG" driven by instance "adau1761_bclk_0_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y17"
+#startgroup
+create_pblock {CLKAG_adau1761_bclk_0_IBUF_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_adau1761_bclk_0_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=bclk1_0_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="adau1761_bclk_0_IBUF_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_adau1761_bclk_0_IBUF_BUFG}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup

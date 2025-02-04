@@ -1,0 +1,80 @@
+
+
+
+&gem1 {
+  status = "okay";    
+    /*first emio gpio as reset*/
+    reset-gpios = <&gpio0 54 1>;
+        
+//    phyremote: ethernet-phy@2 {
+//        phy-mode = "rgmii-id";
+//        reg = <2>;
+//     };
+     
+     
+     mdio {
+				#address-cells = <1>;
+				#size-cells = <0>;
+				phyremote: ethernet-phy@2 {
+					compatible = "realtek,RTL8211E";
+					device_type = "ethernet-phy";
+					reg = <1>;
+				} ;
+			} ;
+        
+    gmiitorgmii: gmiitorgmii@31 {
+        compatible = "xlnx,gmii-to-rgmii-1.0";
+        reg = <31>;
+        phy-handle = <&phyremote>;
+    };
+};
+
+//&gem1 {
+//    compatible = "xlnx,ps7-ethernet-1.00.a";
+        // reg = <0xe000c000 0x1000>;                --- already in zynq-7000.dtsi in 2015.4            
+        // status = "okay";                         --- already in pcw.dtsi in 2015.4                
+        // interrupts = <0 45 4>;                    --- already in zynq-7000.dtsi in 2015.4        
+        
+//    clocks = <&clkc 14>, <&clkc 31>;    
+//    clock-names = "ref_clk", "aper_clk";    
+        
+    //local-mac-address = [aa bb cc dd 20 16];        // already in system-conf.dtsi in 2015.4
+    //xlnx,has-mdio = <0x1>;                          // is present in 2014.4 thus I added it here
+        
+        // #address-cells = <1>;
+        // #size-cells = <0>;
+//};
+
+
+
+// &gem1 {
+    // gmii2rgmii-phy-handle = <&gmii_rgmii>;
+    // phy-mode = "gmii";
+    // status = "okay";
+    // xlnx,ptp-enet-clock = <0x69f6bcb>;
+    // ps7_ethernet_1_mdio: mdio {
+        // #address-cells = <1>;
+        // #size-cells = <0>;
+        // gmii_rgmii: phy@8 {
+            // device_type = "ethernet-phy";
+            // reg = <8>;
+        // };
+    // };
+
+
+//&gem1 {
+//   phy-handle = <&phy1>;
+        // phy-mode = "rgmii-id";                    --- already in pcw.dtsi in 2015.4
+//    
+//    mdio {
+//        #address-cells = <1>;
+//        #size-cells = <0>;
+//        
+//        phy1: phy@0 {
+//            compatible = "marvell,88e1510";
+//            device_type = "ethernet-phy";
+//            reg = <0x0>;
+//            marvell,reg-init = <3 16 0xff00 0x1e 3 17 0xfff0 0x00>;
+//        };
+//    };
+//}; 

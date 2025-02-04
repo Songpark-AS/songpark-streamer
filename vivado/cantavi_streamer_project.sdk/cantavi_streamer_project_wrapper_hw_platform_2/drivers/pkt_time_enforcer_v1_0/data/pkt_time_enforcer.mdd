@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER pkt_time_enforcer
+	OPTION supported_peripherals = (pkt_time_enforcer);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = pkt_time_enforcer;
+END DRIVER

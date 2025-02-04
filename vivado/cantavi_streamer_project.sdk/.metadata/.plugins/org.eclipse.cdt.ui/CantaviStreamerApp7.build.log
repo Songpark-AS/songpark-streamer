@@ -1,0 +1,9 @@
+18:31:50 **** Build of configuration Default for project CantaviStreamerApp7 ****
+make all 
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 src/network.o src/adau1761_controller.o src/zedboardOLED.o src/reg_io.o src/udpclient.o src/stream_control.o src/volume_control.o src/filter_control.o src/ui_control.o src/app_main.o -lrt -lpthread -o connect
+arm-linux-gnueabihf-size connect
+   text	   data	    bss	    dec	    hex	filename
+ 228047	   1676	   1292	 231015	  38667	connect
+
+18:31:51 Build Finished (took 419ms)
+

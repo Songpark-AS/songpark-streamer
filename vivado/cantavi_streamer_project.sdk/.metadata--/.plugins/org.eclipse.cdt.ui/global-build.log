@@ -1,0 +1,481 @@
+13:45:08 **** Build of configuration Default for project CantaviStreamerApp7 ****
+make all 
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/ui_control.o src/ui_control.c
+src/ui_control.c: In function 'net_to_axi_mq_writer':
+src/ui_control.c:239:24: warning: passing argument 1 of 'udp_client_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+    n = udp_client_recv(buffer, UDP_PKT_SIZE);
+                        ^~~~~~
+In file included from src/include/ui_control.h:27:0,
+                 from src/ui_control.c:14:
+src/include/udpclient.h:38:5: note: expected 'unsigned int *' but argument is of type 'char *'
+ int udp_client_recv(unsigned *buffer,int buffer_size );
+     ^~~~~~~~~~~~~~~
+src/ui_control.c: In function 'ui_input_reader':
+src/ui_control.c:283:3: warning: implicit declaration of function 'oled_clear' [-Wimplicit-function-declaration]
+   oled_clear(zedboard_oled_params_0.base_address);
+   ^~~~~~~~~~
+src/ui_control.c:285:4: warning: implicit declaration of function 'oled_print_message' [-Wimplicit-function-declaration]
+    oled_print_message(&menuBuf[0], 0, zedboard_oled_params_0.base_address);
+    ^~~~~~~~~~~~~~~~~~
+src/ui_control.c:311:13: warning: implicit declaration of function 'update_leds' [-Wimplicit-function-declaration]
+             update_leds();
+             ^~~~~~~~~~~
+src/ui_control.c:312:13: warning: implicit declaration of function 'ui_vol_draw'; did you mean 'ui_draw'? [-Wimplicit-function-declaration]
+             ui_vol_draw();
+             ^~~~~~~~~~~
+             ui_draw
+src/ui_control.c:847:14: warning: implicit declaration of function 'time_sync_en'; did you mean 'set_sync_on'? [-Wimplicit-function-declaration]
+              time_sync_en(time_sync_base_0);
+              ^~~~~~~~~~~~
+              set_sync_on
+src/ui_control.c:849:14: warning: implicit declaration of function 'time_sync_tx_en' [-Wimplicit-function-declaration]
+              time_sync_tx_en(full_udp_stack_ip_base_0);
+              ^~~~~~~~~~~~~~~
+src/ui_control.c:859:5: warning: implicit declaration of function 'time_sync_off'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+     time_sync_off(time_sync_base_0);
+     ^~~~~~~~~~~~~
+     set_sync_off
+src/ui_control.c:869:38: warning: implicit declaration of function 'set_sync_rst'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+                                      set_sync_rst(time_sync_base_0);
+                                      ^~~~~~~~~~~~
+                                      set_sync_off
+src/ui_control.c:882:26: warning: implicit declaration of function 'set_sync_pkt_dly'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+                          set_sync_pkt_dly(time_sync_base_0,tmp);
+                          ^~~~~~~~~~~~~~~~
+                          set_sync_off
+src/ui_control.c:893:6: warning: implicit declaration of function 'initiate_sync'; did you mean 'initstate_r'? [-Wimplicit-function-declaration]
+      initiate_sync(time_sync_base_0);
+      ^~~~~~~~~~~~~
+      initstate_r
+src/ui_control.c:1027:5: warning: implicit declaration of function 'extractMacAddress' [-Wimplicit-function-declaration]
+     extractMacAddress(ip,&macAddress[0]);
+     ^~~~~~~~~~~~~~~~~
+src/ui_control.c:1042:11: warning: implicit declaration of function 'extractIpAddress' [-Wimplicit-function-declaration]
+           extractIpAddress(ip,&ipAddress[0]);
+           ^~~~~~~~~~~~~~~~
+src/ui_control.c:1287:17: warning: implicit declaration of function 'set_stream_rx_buf_slack'; did you mean 'set_stream_rx_buf_dlim'? [-Wimplicit-function-declaration]
+                 set_stream_rx_buf_slack(eth_to_audio_base_0,tmp);//in micro seconds
+                 ^~~~~~~~~~~~~~~~~~~~~~~
+                 set_stream_rx_buf_dlim
+src/ui_control.c:1297:23: warning: implicit declaration of function 'set_stream_rx_buf_docc_lim'; did you mean 'set_stream_rx_buf_dlim'? [-Wimplicit-function-declaration]
+                       set_stream_rx_buf_docc_lim(eth_to_audio_base_0,tmp);//in micro seconds
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       set_stream_rx_buf_dlim
+src/ui_control.c:1344:16: warning: implicit declaration of function 'set_stream_pkt_send_delay_enable'; did you mean 'set_stream_pkt_send_delay'? [-Wimplicit-function-declaration]
+                set_stream_pkt_send_delay_enable(eth_packet_sequencer_base_0);//in micro seconds
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                set_stream_pkt_send_delay
+src/ui_control.c:1357:14: warning: implicit declaration of function 'set_stream_pkt_send_delay_disable'; did you mean 'set_stream_pkt_send_delay'? [-Wimplicit-function-declaration]
+              set_stream_pkt_send_delay_disable(eth_packet_sequencer_base_0);//in micro seconds
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              set_stream_pkt_send_delay
+src/ui_control.c:1389:10: warning: implicit declaration of function 'get_playout_delay'; did you mean 'set_playout_delay'? [-Wimplicit-function-declaration]
+    tmp = get_playout_delay(eth_to_audio_base_0);
+          ^~~~~~~~~~~~~~~~~
+          set_playout_delay
+src/ui_control.c:1415:10: warning: implicit declaration of function 'get_sync_time'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+    tmp = get_sync_time(eth_to_audio_base_0);
+          ^~~~~~~~~~~~~
+          set_sync_off
+src/ui_control.c:1417:4: warning: implicit declaration of function 'get_all_eth2audio' [-Wimplicit-function-declaration]
+    get_all_eth2audio(eth_to_audio_base_0);
+    ^~~~~~~~~~~~~~~~~
+src/ui_control.c:1429:17: warning: implicit declaration of function 'get_rx_time_code'; did you mean 'set_xtest_mode'? [-Wimplicit-function-declaration]
+          tmp =  get_rx_time_code(eth_to_audio_base_0);
+                 ^~~~~~~~~~~~~~~~
+                 set_xtest_mode
+src/ui_control.c:1443:12: warning: implicit declaration of function 'get_rx_time_code_eff'; did you mean 'set_xtest_mode_off'? [-Wimplicit-function-declaration]
+     tmp =  get_rx_time_code_eff(eth_to_audio_base_0);
+            ^~~~~~~~~~~~~~~~~~~~
+            set_xtest_mode_off
+src/ui_control.c:1457:11: warning: implicit declaration of function 'get_rx_time_code_occ'; did you mean 'set_xtest_mode_off'? [-Wimplicit-function-declaration]
+    tmp =  get_rx_time_code_occ(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~~~~~~~
+           set_xtest_mode_off
+src/ui_control.c:1472:9: warning: implicit declaration of function 'get_rx_time_code_fout'; did you mean 'set_xtest_mode_off'? [-Wimplicit-function-declaration]
+   tmp = get_rx_time_code_fout(eth_to_audio_base_0);
+         ^~~~~~~~~~~~~~~~~~~~~
+         set_xtest_mode_off
+src/ui_control.c:1483:14: warning: implicit declaration of function 'get_dac_fifo_occ'; did you mean 'reset_dac_fifos'? [-Wimplicit-function-declaration]
+        tmp = get_dac_fifo_occ(eth_to_audio_base_0);
+              ^~~~~~~~~~~~~~~~
+              reset_dac_fifos
+src/ui_control.c:1535:14: warning: implicit declaration of function 'set_buf_corr_window' [-Wimplicit-function-declaration]
+              set_buf_corr_window(eth_to_audio_base_0,tmp);
+              ^~~~~~~~~~~~~~~~~~~
+src/ui_control.c:1543:6: warning: implicit declaration of function 'clear_buf_corr'; did you mean 'clearerr'? [-Wimplicit-function-declaration]
+      clear_buf_corr(eth_to_audio_base_0);
+      ^~~~~~~~~~~~~~
+      clearerr
+src/ui_control.c:1545:14: warning: implicit declaration of function 'set_buf_corr_on'; did you mean 'set_sync_on'? [-Wimplicit-function-declaration]
+              set_buf_corr_on(eth_to_audio_base_0);
+              ^~~~~~~~~~~~~~~
+              set_sync_on
+src/ui_control.c:1574:11: warning: implicit declaration of function 'get_e2a_status'; did you mean 'read_fifo_status'? [-Wimplicit-function-declaration]
+           get_e2a_status(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~
+           read_fifo_status
+src/ui_control.c: At top level:
+src/ui_control.c:2169:6: warning: conflicting types for 'ui_vol_draw'
+ void ui_vol_draw () {
+      ^~~~~~~~~~~
+src/ui_control.c:312:13: note: previous implicit declaration of 'ui_vol_draw' was here
+             ui_vol_draw();
+             ^~~~~~~~~~~
+src/ui_control.c:2625:6: warning: conflicting types for 'update_leds'
+ void update_leds(){
+      ^~~~~~~~~~~
+src/ui_control.c:311:13: note: previous implicit declaration of 'update_leds' was here
+             update_leds();
+             ^~~~~~~~~~~
+src/ui_control.c:3068:6: warning: conflicting types for 'extractIpAddress'
+ void extractIpAddress(unsigned char *sourceString,unsigned char *ipAddress)
+      ^~~~~~~~~~~~~~~~
+src/ui_control.c:1042:11: note: previous implicit declaration of 'extractIpAddress' was here
+           extractIpAddress(ip,&ipAddress[0]);
+           ^~~~~~~~~~~~~~~~
+src/ui_control.c: In function 'print_mac':
+src/ui_control.c:3113:20: warning: right shift count >= width of type [-Wshift-count-overflow]
+     bytes[4] = (ip >> 32) & 0xFF;
+                    ^~
+src/ui_control.c:3114:20: warning: right shift count >= width of type [-Wshift-count-overflow]
+     bytes[5] = (ip >> 40) & 0xFF;
+                    ^~
+src/ui_control.c: At top level:
+src/ui_control.c:3127:6: warning: conflicting types for 'extractMacAddress'
+ void extractMacAddress(unsigned char *sourceString,unsigned char *macAddress)
+      ^~~~~~~~~~~~~~~~~
+src/ui_control.c:1027:5: note: previous implicit declaration of 'extractMacAddress' was here
+     extractMacAddress(ip,&macAddress[0]);
+     ^~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 src/adau1761_controller.o src/zedboardOLED.o src/reg_io.o src/udpclient.o src/stream_control.o src/volume_control.o src/filter_control.o src/ui_control.o src/app_main.o -lrt -lpthread -o cantavi_streamer
+arm-linux-gnueabihf-size cantavi_streamer
+   text	   data	    bss	    dec	    hex	filename
+ 188641	   1628	   1116	 191385	  2eb99	cantavi_streamer
+13:31:17 **** Auto Build of configuration Debug for project FSBL ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fsbl_hooks.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.o" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+Finished building: ../src/fsbl_hooks.c
+ 
+Building file: ../src/image_mover.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/image_mover.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.o" -o "src/image_mover.o" "../src/image_mover.c"
+Finished building: ../src/image_mover.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:137:0:
+../../FSBL_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/nand.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/nand.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.o" -o "src/nand.o" "../src/nand.c"
+Finished building: ../src/nand.c
+ 
+Building file: ../src/nor.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/nor.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.o" -o "src/nor.o" "../src/nor.c"
+Finished building: ../src/nor.c
+ 
+Building file: ../src/pcap.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/pcap.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.o" -o "src/pcap.o" "../src/pcap.c"
+In file included from ../src/pcap.c:100:0:
+../../FSBL_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/pcap.c
+ 
+Building file: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3/ps7_init.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/ps7_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.o" -o "src/ps7_init.o" "/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3/ps7_init.c"
+Finished building: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3/ps7_init.c
+ 
+Building file: ../src/qspi.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/qspi.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.o" -o "src/qspi.o" "../src/qspi.c"
+Finished building: ../src/qspi.c
+ 
+Building file: ../src/sd.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/sd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.o" -o "src/sd.o" "../src/sd.c"
+Finished building: ../src/sd.c
+ 
+Building target: FSBL.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FSBL_bsp/ps7_cortexa9_0/lib -o "FSBL.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+Finished building target: FSBL.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size FSBL.elf  |tee "FSBL.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81496	  11408	  74712	 167616	  28ec0	FSBL.elf
+Finished building: FSBL.elf.size
+ 
+13:31:21 **** Auto Build of project device_tree_bsp_2 ****
+make -k all 
+make: Nothing to be done for 'all'.
+13:31:53 **** Auto Build of project device_tree_bsp_2 ****
+make -k all 
+make: Nothing to be done for 'all'.
+16:06:29 **** Auto Build of project FSBL_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_5/src
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_0/src
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/pmod_controller_v1_0/src
+make -C ps7_cortexa9_0/libsrc/pmod_controller_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/FILTER_IIR_v1_0/src
+make -C ps7_cortexa9_0/libsrc/FILTER_IIR_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ZedboardOLED_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ZedboardOLED_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/Volume_Pregain_v1_0/src
+make -C ps7_cortexa9_0/libsrc/Volume_Pregain_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/adau1761_controller_v1_0/src
+make -C ps7_cortexa9_0/libsrc/adau1761_controller_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_5/src
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_0/src
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling XilFFs Library
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ttcps
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/pmod_controller_v1_0/src
+make -C ps7_cortexa9_0/libsrc/pmod_controller_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling pmod_controller...
+pmod_controller_selftest.c: In function 'PMOD_CONTROLLER_Reg_SelfTest':
+pmod_controller_selftest.c:52:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMOD_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                ^~
+pmod_controller_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/FILTER_IIR_v1_0/src
+make -C ps7_cortexa9_0/libsrc/FILTER_IIR_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling FILTER_IIR...
+FILTER_IIR_selftest.c: In function 'FILTER_IIR_Reg_SelfTest':
+FILTER_IIR_selftest.c:52:59: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( FILTER_IIR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                           ^~
+FILTER_IIR_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/ZedboardOLED_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ZedboardOLED_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ZedboardOLED...
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/Volume_Pregain_v1_0/src
+make -C ps7_cortexa9_0/libsrc/Volume_Pregain_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling Volume_Pregain...
+Volume_Pregain_selftest.c: In function 'VOLUME_PREGAIN_Reg_SelfTest':
+Volume_Pregain_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( VOLUME_PREGAIN_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+Volume_Pregain_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/adau1761_controller_v1_0/src
+make -C ps7_cortexa9_0/libsrc/adau1761_controller_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling adau1761_controller...
+adau1761_controller_selftest.c: In function 'ADAU1761_CONTROLLER_Reg_SelfTest':
+adau1761_controller_selftest.c:52:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( ADAU1761_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                    ^~
+adau1761_controller_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+16:06:46 **** Auto Build of configuration Debug for project FSBL ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/fsbl_hooks.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.o" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+Finished building: ../src/fsbl_hooks.c
+ 
+Building file: ../src/image_mover.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/image_mover.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.o" -o "src/image_mover.o" "../src/image_mover.c"
+Finished building: ../src/image_mover.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:137:0:
+../../FSBL_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../src/md5.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/md5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.o" -o "src/md5.o" "../src/md5.c"
+Finished building: ../src/md5.c
+ 
+Building file: ../src/nand.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/nand.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.o" -o "src/nand.o" "../src/nand.c"
+Finished building: ../src/nand.c
+ 
+Building file: ../src/nor.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/nor.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.o" -o "src/nor.o" "../src/nor.c"
+Finished building: ../src/nor.c
+ 
+Building file: ../src/pcap.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/pcap.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.o" -o "src/pcap.o" "../src/pcap.c"
+In file included from ../src/pcap.c:100:0:
+../../FSBL_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/pcap.c
+ 
+Building file: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3/ps7_init.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/ps7_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.o" -o "src/ps7_init.o" "/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3/ps7_init.c"
+Finished building: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3/ps7_init.c
+ 
+Building file: ../src/qspi.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/qspi.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.o" -o "src/qspi.o" "../src/qspi.c"
+Finished building: ../src/qspi.c
+ 
+Building file: ../src/sd.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"src/sd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FSBL_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.o" -o "src/sd.o" "../src/sd.c"
+Finished building: ../src/sd.c
+ 
+Building target: FSBL.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../FSBL_bsp/ps7_cortexa9_0/lib -o "FSBL.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+Finished building target: FSBL.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size FSBL.elf  |tee "FSBL.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81496	  11408	  74712	 167616	  28ec0	FSBL.elf
+Finished building: FSBL.elf.size
+ 
+16:07:06 **** Auto Build of configuration Debug for project FSBL ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:31:49 **** Auto Build of project device_tree_bsp_2 ****
+make -k all 
+make: Nothing to be done for 'all'.

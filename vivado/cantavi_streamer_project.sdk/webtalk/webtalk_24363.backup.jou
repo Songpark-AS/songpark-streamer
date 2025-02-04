@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Wed May 12 15:55:43 2021
+# Process ID: 24363
+# Current directory: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-48-tm_sw_sip/vivado/cantavi_streamer_project.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-48-tm_sw_sip/vivado/cantavi_streamer_project.sdk/webtalk/webtalk.log
+# Journal file: /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-48-tm_sw_sip/vivado/cantavi_streamer_project.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

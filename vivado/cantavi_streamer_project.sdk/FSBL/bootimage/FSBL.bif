@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MKT/vivado/cantavi_streamer_project.sdk/FSBL/Debug/FSBL.elf
+	/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer6-single-tc-grplc-int-tm_sw_sip_cc_MKT/vivado/cantavi_streamer_project.sdk/cantavi_streamer_project_wrapper_hw_platform_14/cantavi_streamer_project_wrapper.bit
+	/home/thanx/LinuxWorkspace/XilinxLinux/u-boot-xlnx/u-boot.elf
+}

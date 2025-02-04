@@ -1,0 +1,378 @@
+/**
+ * =====================================================================================
+ *
+ *       Filename:  stream_control.c
+ *
+ *    Description:  audio stream control functions and macros
+ *
+ *        Version:  1.0
+ *         Author:  Thanx
+ *   Organization:  Cantavi
+ *
+ * =====================================================================================
+ */
+
+#include "include/stream_control.h"
+#include <unistd.h> // for usleep
+/**
+ * =======================================================
+ * read_stream reads 4 bytes unsigned data
+ * from the specified channel
+ * @param   : stream_base  : base address of the stream
+ * @param   : channel      : channel ID
+ * @return  : returns 4 bytes unsigned data
+ * =======================================================
+ */
+unsigned read_stream (void *stream_base, CHANNEL_ID channel) {
+  unsigned buffer = 0;
+  if (stream_base == NULL) {
+    return -1;
+  }
+
+//  if (channel == CHANNEL_ID_L) {
+//    buffer = ReadReg(stream_base, AUDIO_TO_AXI_INTERFACE_REG0_OFFSET);
+//  }
+//  else if (channel == CHANNEL_ID_R) {
+//    buffer = ReadReg(stream_base, AUDIO_TO_AXI_INTERFACE_REG1_OFFSET);
+//  }
+  if (channel == CHANNEL_ID_L) {
+	  do{
+		  buffer = ReadReg(stream_base, AUDIO_TO_AXI_INTERFACE_REG1_OFFSET);
+		  if(buffer == 0xFF000000){
+			  usleep(1/48000 * 1000000*16);
+		  }
+	  }while(buffer > 0xFF000000);
+
+    }
+    else if (channel == CHANNEL_ID_R) {
+    	do{
+			  buffer = ReadReg(stream_base, AUDIO_TO_AXI_INTERFACE_REG2_OFFSET);
+			  if(buffer == 0xFF000000){
+				  usleep(1/48000 * 1000000*16);
+			  }
+		  }while(buffer == 0xFF000000);
+    }
+  else {
+    return -1;
+  }
+  return buffer;
+}
+
+/**
+ * =======================================================
+ * write_stream writes 4 bytes unsigned data
+ * to the spicified channel
+ * @param  stream_base  : base address of the stream
+ * @param  channel      : channel ID
+ * @param  data         : 4 bytes unsigned data
+ * @return  : returns 0 upon success
+ *            -1 otherwise
+ * =======================================================
+ */
+int write_stream (void *stream_base, CHANNEL_ID channel, unsigned data) {
+  if (stream_base == NULL) {
+    return -1;
+  }
+
+//  if (channel == CHANNEL_ID_L) {
+//    WriteReg(stream_base, AXI_TO_AUDIO_INTERFACE_REG0_OFFSET, data);
+//  }
+//  else if (channel == CHANNEL_ID_R) {
+//    WriteReg(stream_base, AXI_TO_AUDIO_INTERFACE_REG1_OFFSET, data);
+//  }
+  if (channel == CHANNEL_ID_L) {
+      WriteReg(stream_base, AXI_TO_AUDIO_INTERFACE_REG1_OFFSET, data);
+    }
+    else if (channel == CHANNEL_ID_R) {
+      WriteReg(stream_base, AXI_TO_AUDIO_INTERFACE_REG2_OFFSET, data);
+    }
+  else {
+    return -1;
+  }
+  return 0;
+}
+
+
+
+/**
+ * =======================================================
+ * read_fifo_staus reads 4 bytes unsigned data
+ * from the specified channel
+ * @param   : stream_base  : base address of the stream
+ * @param   : fifo      : fifo ID
+ * @return  : returns 4 bytes unsigned data
+ * =======================================================
+ *
+ * rValue(2) <= dacLeftFIFOEmpty;
+	rValue(3) <= dacRightFIFOEmpty;
+	rValue(4) <= dacLeftFIFOFull;
+	rValue(5) <= dacRightFIFOFull;
+ * =======================================================
+ */
+unsigned read_fifo_status (void *stream_base, FIFO_ID fifo) {
+  unsigned buffer = 0;
+  if (stream_base == NULL) {
+    return -1;
+  }
+
+  if (fifo == ADC_FIFO_ID) {
+    buffer = ReadReg(stream_base, AUDIO_TO_AXI_INTERFACE_REG0_OFFSET);
+    if(buffer&0x04){
+    	//LeftFIFOEmpty
+    }else if(buffer&0x08){
+    	//RightFIFOEmpty
+    }else if(buffer&0x10){
+    	//LeftFIFOFull
+    }else if(buffer&0x20){
+    	//RightFIFOFull
+    }
+  }
+  else if (fifo == DAC_FIFO_ID) {
+    buffer = ReadReg(stream_base, AXI_TO_AUDIO_INTERFACE_REG0_OFFSET);
+    if(buffer&0x04){
+		//LeftFIFOEmpty
+	}else if(buffer&0x08){
+		//RightFIFOEmpty
+	}else if(buffer&0x10){
+		//LeftFIFOFull
+	}else if(buffer&0x20){
+		//RightFIFOFull
+	}
+  }
+
+  else {
+    return -1;
+  }
+  return buffer;
+}
+
+void reset_fifos(void *stream_base, FIFO_ID fifo, unsigned data){
+	  if (fifo == ADC_FIFO_ID) {
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, data);
+	    }
+	    else if (fifo == DAC_FIFO_ID) {
+	      WriteReg(stream_base, ETH_TO_AUDIO_INTERFACE_REG0_OFFSET, data);
+	    }
+}
+
+
+void set_test_mode_on(void *stream_base){
+		  unsigned int d = ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)|0x00000080;
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, d);
+}
+
+
+void set_test_mode_off(void *stream_base){
+		  unsigned int d = ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)&0xFFFFFF7F;
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, d);
+}
+
+
+void set_pcnt_mode_on(void *stream_base){
+		  unsigned int d = ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)|0x00000040;
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, d);
+}
+
+
+void set_pcnt_mode_off(void *stream_base){
+		  unsigned int d = ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)&0xFFFFFFBF;
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, d);
+}
+
+
+
+void set_stream_send_on(void *stream_base){
+		  unsigned int d = ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)|0x00000100;
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, d);
+}
+
+
+void set_stream_send_off(void *stream_base){
+		  unsigned int d = ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)&0xFFFFFEFF;
+	      WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET, d);
+}
+
+
+unsigned int get_test_mode(void *stream_base){
+		if(ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG0_OFFSET)&0x00000080){
+			printf("We are in test mode no ADC just a counter\n");
+	      return 1;
+		}else{
+			printf("We are in run mode.\n");
+		}
+}
+
+void set_stream_plen(void *stream_base, unsigned data){
+
+	WriteReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG3_OFFSET, data);
+
+}
+
+
+unsigned int get_stream_plen(void *stream_base){
+
+	return ReadReg(stream_base, AUDIO_TO_ETH_INTERFACE_REG3_OFFSET);
+
+}
+
+
+
+void stream_source_select(void *stream_base, FIFO_ID fifo, unsigned data){
+	  if (fifo == ADC_FIFO_ID) {
+	      WriteReg(stream_base, ETH_TO_AUDIO_INTERFACE_REG0_OFFSET, data);
+	    }
+	    else if (fifo == DAC_FIFO_ID) {
+	      WriteReg(stream_base, AUDIO_TO_AXI_INTERFACE_REG0_OFFSET, data);
+	    }
+}
+
+void write_audio_to_eth_param(void *audio_to_eth_base, AUDIO_TO_ETH_REG_ID param, unsigned data){
+	if (param == PAYLEN_REG_ID) {
+		  WriteReg(audio_to_eth_base, ETH_UDP_REG3_OFFSET, data);
+		}
+}
+
+
+void write_eth_param(void *eth_base, ETH_PARAM_ID param, unsigned data){
+	if (param == LOCAL_IP_ID) {
+		  WriteReg(eth_base, ETH_UDP_REG2_OFFSET, data);
+		}
+		else if (param == GTWAY_IP_ID) {
+		  WriteReg(eth_base, ETH_UDP_REG3_OFFSET, data);
+		}
+		else if (param == MASK_IP_ID) {
+		  WriteReg(eth_base, ETH_UDP_REG4_OFFSET, data);
+		}
+	else if (param == DEST_IP_ID) {
+	  WriteReg(eth_base, ETH_UDP_REG5_OFFSET, data);
+	}
+	else if (param == DEST_PORT_ID) {
+		  WriteReg(eth_base, ETH_UDP_REG6_OFFSET, data);
+		}
+	else if (param == PKT_LEN_ID) {//not writen from command but depends on payload command
+		  WriteReg(eth_base, ETH_UDP_REG14_OFFSET, data);
+		}
+	else if (param == ETH_CONTROL_ID) {//not writen from command but depends on payload command
+			  WriteReg(eth_base, ETH_UDP_REG15_OFFSET, data);
+			}
+//	else if (param == MAC_ID) {
+//	  WriteReg(eth_base, ETH_UDP_REG0_OFFSET, (unsigned)(data & 0x00FFFFFF));
+//	  WriteReg(eth_base, ETH_UDP_REG1_OFFSET, (unsigned)(data & 0x00FFFFFF));
+//	}
+}
+
+
+void write_eth_mac(void *eth_base, ETH_PARAM_ID param, unsigned char * mac){
+	if (param == MAC_ID) {
+
+	  WriteReg(eth_base, ETH_UDP_REG0_OFFSET, (unsigned)(mac[0]<<16|mac[1]<<8|mac[2]));
+	  WriteReg(eth_base, ETH_UDP_REG1_OFFSET, (unsigned)(mac[3]<<16|mac[4]<<8|mac[5]));
+
+	}else{
+
+	}
+}
+
+
+
+unsigned long read_eth_mac(void *eth_base, ETH_PARAM_ID param){
+	unsigned d0, d1;
+	unsigned long mac ;
+	if (param == MAC_ID) {
+	  d0 = ReadReg(eth_base, ETH_UDP_REG0_OFFSET);
+	  d1 = ReadReg(eth_base, ETH_UDP_REG1_OFFSET);
+	  printf("MAC Address Part 1: 0x%X\n",d0);
+	  printf("MAC Address Part 1: 0x%X\n",d1);
+	      printf("MAC Address: %x.%x.%x.%x.%x.%x\n", (d1 >> 16) & 0x000000FF, (d1 >> 8) & 0x000000FF, d1 & 0x000000FF, (d0 >> 16) & 0x000000FF, (d0 >> 8) & 0x000000FF, d0 & 0x000000FF);
+	}else{
+		return -1;
+	}
+	mac = ((d0&0x00FFFFFF)<<24) | (d1&0x00FFFFFF);
+	return mac;
+}
+
+/**
+ * =======================================================
+ * read_eth_status_regs reads 4 bytes unsigned data
+ * from the specified channel
+ * @param   : eth_base  : base address of the stream
+ * @param   : param      : reg ID
+ * @return  : returns 4 bytes unsigned data
+ * =======================================================
+ *  slv_reg0_mac;
+ *  slv_reg1_mac;
+ *  slv_reg2_local_ip;
+ *  slv_reg3_gateway_ip;
+ *  slv_reg4_subnet_mask;
+ *  slv_reg5_dest_ip;
+ *  slv_reg6_dest_port;
+ *  slv_reg7_loop_timer;
+ *  slv_reg8_latency_timer;
+ *  slv_reg9_sample_fifo_timer;
+ *  slv_regA_net_errors;
+ *  slv_regB_lost_packets;
+ *  slv_regC_tx_packets;
+ *  slv_regD_rx_packets;
+ *  slv_regE_length;
+ *  slv_regF_ctrl;
+ * =======================================================
+ */
+unsigned read_eth_param (void *eth_base, ETH_REG_ID param) {
+	unsigned buffer = 0;
+	if (eth_base == NULL) {
+		return -1;
+	}
+
+    if (param == LOCAL_IP_REG_ID) {
+    	buffer = ReadReg(eth_base, ETH_UDP_REG2_OFFSET);
+	}
+	else if (param == GTWAY_IP_REG_ID) {
+		buffer = ReadReg(eth_base, ETH_UDP_REG3_OFFSET);
+	}
+	else if (param == MASK_IP_REG_ID) {
+		buffer = ReadReg(eth_base, ETH_UDP_REG4_OFFSET);
+	}
+  	else if (param == DEST_IP_REG_ID) {
+  		buffer = ReadReg(eth_base, ETH_UDP_REG5_OFFSET);
+  	}
+  	else if (param == DEST_PORT_REG_ID) {
+  		buffer = ReadReg(eth_base, ETH_UDP_REG6_OFFSET);
+	}
+  	else if (param == LOOP_TIMER_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG7_OFFSET);
+    }
+  	else if (param == LATENCY_TIMER_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG8_OFFSET);
+  	}
+  	else if (param == SAMPLE_FIFO_TIMER_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG9_OFFSET);
+  	}
+  	else if (param == NET_ERRORS_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG10_OFFSET);
+  	}
+  	else if (param == LOST_PACKETS_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG11_OFFSET);
+  	}
+  	else if (param == TX_PACKETS_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG12_OFFSET);
+  	}
+  	else if (param == RX_PACKETS_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG13_OFFSET);
+  	}
+  	else if (param == PACKET_LENGTH_REG_ID) {
+  	  	buffer = ReadReg(eth_base, ETH_UDP_REG14_OFFSET);
+  	}
+  	else if (param == ETH_CONTROL_REG_ID) {//not read from command but depends on payload command
+  		buffer = ReadReg(eth_base, ETH_UDP_REG15_OFFSET);
+	}
+	else {
+		printf("Error requested register does not exist..\n\n");
+		return -1;
+
+	}
+  return buffer;
+}
+
+
+
+

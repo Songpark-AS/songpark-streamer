@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="setport" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="setport"/>
+			<item value="call_param"/>
+			<item value="strdport"/>
+			<item value="setdestport"/>
+			<item value="setsport"/>
+			<item value="setdport"/>
+			<item value="rcall"/>
+			<item value="call_params.stream_port"/>
+		</list>
+		<list key="replacehistory">
+			<item value="\&quot;call__para"/>
+			<item value="{\&quot;tpx_msg\&quot;:\&quot;"/>
+			<item value="sigtpx"/>
+			<item value="call_params."/>
+			<item value=" = 0;"/>
+			<item value="&quot;set"/>
+			<item value="struct sockaddr_in"/>
+			<item value="SAMPLE_RATE"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="432" key="DIALOG_WIDTH"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="575" key="DIALOG_HEIGHT"/>
+		<item value="155" key="DIALOG_X_ORIGIN"/>
+		<item value="167" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

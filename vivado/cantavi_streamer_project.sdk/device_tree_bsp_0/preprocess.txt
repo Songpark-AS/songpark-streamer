@@ -1,0 +1,3 @@
+all:
+	cpp -nostdinc -I include -I arch  -undef -x assembler-with-cpp  system-top.dts devicetree_processed.dts
+	dtc -I dts -O dtb devicetree_processed.dts -o devicetree.dtb

@@ -1,0 +1,72 @@
+URL	-- Set SIP URL of the account(i.e. From header). 
+		For example: "sip:thankssoft@voip1.iononit.no"
+
+Registrar : 	sip:voip1.iononit.no	
+		
+Auth Realm :   *
+
+Auth Username: thankssoft
+
+Auth password: testererw4433
+
+
+
+
+URL	-- Set SIP URL of the account(i.e. From header). 
+		For example: "sip:thankssoft2@voip1.iononit.no"
+18.198.222.104
+
+Registrar : 	sip:voip1.iononit.no	
+		
+Auth Realm :   *
+
+Auth Username: thankssoft2
+
+Auth password: password1
+
+
+host voip1.iononit.no resolver1.opendns.com
+
+./pjsua --id sip:thankssoft@voip1.iononit.no --registrar sip:voip1.iononit.no --realm * --username thankssoft --password testererw4433
+          
+          
+          
+./pjsua --local-port=5070 --id sip:thankssoft2@voip1.iononit.no --registrar sip:voip1.iononit.no --realm * --username thankssoft2 --password password1
+
+
+dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
+
+dig -x  94.237.100.100 +noall +answer
+
+
+./sip_client 18.198.222.104 thankssoft2 password1
+
+
+
+//---------------------------------------------------
+pj_sock_socket() fuction in pj/sock_bsd.c is the key we need to  link with the hw bridge
+
+
+The sock_bsd file is the base file which makes calls to the OS specific layers, 
+we change this so that calls destined for the FPGA can be identified.
+
+One method of doing this is to change 
+
+#   define pj_SOCK_DGRAM()  PJ_SOCK_DGRAM				to
+
+//#   define pj_SOCK_DGRAM()  PJ_SOCK_DGRAM
+#   define pj_SOCK_DGRAM_MED()  PJ_SOCK_DGRAM_MED
+#   define pj_SOCK_DGRAM_SIG()  PJ_SOCK_DGRAM_SIG
+
+Then we use the type argument in pj_sock_socket() to open the bsd or FPGA socket.
+
+To separate udp media sockets and signaling sockets this is a huge under taking but the only way to ensure all transports ar covered
+
+Active sockets are all SIG
+
+MEDIA sockets we have MED and SIG type
+
+use build.sh to build first after a symbol change this rebuilds the whole application and avoids nasty linking errors
+
+
+

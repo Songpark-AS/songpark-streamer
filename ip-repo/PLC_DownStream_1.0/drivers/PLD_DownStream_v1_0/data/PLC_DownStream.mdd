@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER PLD_DownStream
+	OPTION supported_peripherals = (PLD_DownStream);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = PLD_DownStream;
+END DRIVER

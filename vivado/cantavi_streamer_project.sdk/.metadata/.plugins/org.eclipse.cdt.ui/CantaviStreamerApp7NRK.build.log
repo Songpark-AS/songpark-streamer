@@ -1,0 +1,6 @@
+19:04:27 **** Build of configuration Default for project CantaviStreamerApp7NRK ****
+make clean 
+rm -rf src/*.o connect
+
+19:04:28 Build Finished (took 318ms)
+

@@ -1,0 +1,9 @@
+19:40:13 **** Build of configuration Default for project CantaviStreamerApp5 ****
+make all 
+arm-linux-gnueabihf-gcc src/cantavi_streamer.c  -I./include --std=gnu99 -O0 -lrt -lpthread -o cantavi_streamer
+arm-linux-gnueabihf-size cantavi_streamer
+   text	   data	    bss	    dec	    hex	filename
+  14579	    392	    368	  15339	   3beb	cantavi_streamer
+
+19:40:13 Build Finished (took 365ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;device_tree_bsp_0/zynq-zed.dts&apos; to &apos;cantavi_streamer.dts&apos;" description="Rename resource &apos;zynq-zed.dts&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="zynq-zed.dts" name="cantavi_streamer.dts" stamp="1550337427307" updateReferences="true"/>
+</session>

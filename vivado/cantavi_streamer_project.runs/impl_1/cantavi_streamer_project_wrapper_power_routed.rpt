@@ -1,0 +1,196 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Mar 21 23:23:59 2023
+| Host             : JAIRE running 64-bit Arch Linux
+| Command          : report_power -file cantavi_streamer_project_wrapper_power_routed.rpt -pb cantavi_streamer_project_wrapper_power_summary_routed.pb -rpx cantavi_streamer_project_wrapper_power_routed.rpx
+| Design           : cantavi_streamer_project_wrapper
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 2.679        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 2.491        |
+| Device Static (W)        | 0.188        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 54.1         |
+| Junction Temperature (C) | 55.9         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.077 |       14 |       --- |             --- |
+| Slice Logic              |     0.144 |    60211 |       --- |             --- |
+|   LUT as Logic           |     0.095 |    19677 |     53200 |           36.99 |
+|   LUT as Distributed RAM |     0.034 |     8314 |     17400 |           47.78 |
+|   CARRY4                 |     0.011 |     2648 |     13300 |           19.91 |
+|   Register               |     0.003 |    22334 |    106400 |           20.99 |
+|   F7/F8 Muxes            |     0.001 |     2327 |     53200 |            4.37 |
+|   LUT as Shift Register  |    <0.001 |      114 |     17400 |            0.66 |
+|   BUFG                   |    <0.001 |       13 |        32 |           40.63 |
+|   Others                 |     0.000 |      709 |       --- |             --- |
+| Signals                  |     0.206 |    46631 |       --- |             --- |
+| Block RAM                |     0.190 |     86.5 |       140 |           61.79 |
+| MMCM                     |     0.229 |        2 |         4 |           50.00 |
+| DSPs                     |     0.047 |       28 |       220 |           12.73 |
+| I/O                      |     0.070 |       48 |       200 |           24.00 |
+| PS7                      |     1.529 |        1 |       --- |             --- |
+| Static Power             |     0.188 |          |           |                 |
+| Total                    |     2.679 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.677 |       0.649 |      0.028 |
+| Vccaux    |       1.800 |     0.148 |       0.129 |      0.019 |
+| Vcco33    |       3.300 |     0.020 |       0.019 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.026 |       0.017 |      0.010 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.762 |       0.718 |      0.044 |
+| Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
+| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
+| Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.003 |       0.002 |      0.001 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------+-----------------------------------------------------------------------------------------+-----------------+
+| Clock                                         | Domain                                                                                  | Constraint (ns) |
++-----------------------------------------------+-----------------------------------------------------------------------------------------+-----------------+
+| clk90_mmcm_out                                | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk90_mmcm_out                   |             8.0 |
+| clk_100_in                                    | clk_100_in                                                                              |            10.0 |
+| clk_fpga_0                                    | cantavi_streamer_project_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]             |            10.0 |
+| clk_mmcm_out                                  | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/clk_mmcm_out                     |             8.0 |
+| clk_out1_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out1_cantavi_streamer_project_clk_wiz_0_0 |            81.4 |
+| clk_out2_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/clk_out2_cantavi_streamer_project_clk_wiz_0_0 |            10.0 |
+| clkfbout_cantavi_streamer_project_clk_wiz_0_0 | cantavi_streamer_project_i/clk_wiz_0/inst/clkfbout_cantavi_streamer_project_clk_wiz_0_0 |            10.0 |
+| mmcm_clkfb                                    | cantavi_streamer_project_i/user_cross_layer_swi_0/inst/mmcm_clkfb                       |            10.0 |
+| phy_rx_clk_0                                  | phy_rx_clk_0                                                                            |             8.0 |
++-----------------------------------------------+-----------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------+-----------+
+| Name                             | Power (W) |
++----------------------------------+-----------+
+| cantavi_streamer_project_wrapper |     2.491 |
+|   cantavi_streamer_project_i     |     2.423 |
+|     AudioProcessingChannel       |     0.529 |
+|       FILTER_IIR_1               |     0.004 |
+|       audio_fader_0              |     0.008 |
+|       audio_fader_1              |     0.008 |
+|       eth_to_audio_plc_com_0     |     0.332 |
+|       user_org_plc_seq_ip_0      |     0.175 |
+|     FILTER_IIR_0                 |     0.004 |
+|       U0                         |     0.004 |
+|     ZedCodec                     |     0.002 |
+|     ZedboardOLED_0               |     0.010 |
+|       inst                       |     0.010 |
+|     clk_wiz_0                    |     0.123 |
+|       inst                       |     0.123 |
+|     eth_udp_axi_arp_stack_0      |     0.031 |
+|       inst                       |     0.031 |
+|     org_audio2eth_interl_0       |     0.007 |
+|       U0                         |     0.007 |
+|     processing_system7_0         |     1.539 |
+|       inst                       |     1.539 |
+|     ps7_0_axi_periph             |     0.005 |
+|       s00_couplers               |     0.003 |
+|       xbar                       |     0.001 |
+|     time_sync_block_0            |     0.017 |
+|       U0                         |     0.017 |
+|     user_cross_layer_swi_0       |     0.154 |
+|       inst                       |     0.154 |
++----------------------------------+-----------+
+
+

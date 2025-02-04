@@ -1,0 +1,13 @@
+19:42:20 **** Build of configuration Default for project uio_driver ****
+make all 
+make -C /home/thanx/LinuxWorkspace/XilinxLinux/linux-xlnx/ ARCH=arm M=/home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer5/vivado/cantavi_streamer_project.sdk/uio_driver/ modules
+make[1]: Entering directory '/home/thanx/LinuxWorkspace/XilinxLinux/linux-xlnx'
+  CC [M]  /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer5/vivado/cantavi_streamer_project.sdk/uio_driver//src/uio_pdrv_genirq.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer5/vivado/cantavi_streamer_project.sdk/uio_driver//src/uio_pdrv_genirq.mod.o
+  LD [M]  /home/thanx/HDL-Workspace/Xilinx_SDK_Workspace/MyAudio/CantaviStreamer5/vivado/cantavi_streamer_project.sdk/uio_driver//src/uio_pdrv_genirq.ko
+make[1]: Leaving directory '/home/thanx/LinuxWorkspace/XilinxLinux/linux-xlnx'
+
+19:42:26 Build Finished (took 5s.877ms)
+

@@ -1,0 +1,305 @@
+15:36:57 **** Build of configuration Default for project CantaviStreamerNoSIPApp ****
+make clean all 
+rm -rf src/*.o connect
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/iptables.o src/iptables.c
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/network.o src/network.c
+src/network.c: In function 'print_mac':
+src/network.c:82:20: warning: right shift count >= width of type [-Wshift-count-overflow]
+     bytes[4] = (ip >> 32) & 0xFF;
+                    ^~
+src/network.c:83:20: warning: right shift count >= width of type [-Wshift-count-overflow]
+     bytes[5] = (ip >> 40) & 0xFF;
+                    ^~
+src/network.c: In function 'stohi':
+src/network.c:805:8: warning: implicit declaration of function 'isdigit' [-Wimplicit-function-declaration]
+   if (!isdigit(c)){  //first char is 0
+        ^~~~~~~
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/adau1761_controller.o src/adau1761_controller.c
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/zedboardOLED.o src/zedboardOLED.c
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/reg_io.o src/reg_io.c
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/udpclient.o src/udpclient.c
+src/udpclient.c: In function 'udp_client_recv':
+src/udpclient.c:86:94: warning: passing argument 6 of 'recvfrom' makes pointer from integer without a cast [-Wint-conversion]
+     return recvfrom(client_socket,buffer,buffer_size,0,(struct sockaddr *)&receiving_address,addr_size);
+                                                                                              ^~~~~~~~~
+In file included from src/udpclient.c:9:0:
+/media/tools/Xilinx/SDK/2018.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include/sys/socket.h:163:16: note: expected 'socklen_t * restrict {aka unsigned int * restrict}' but argument is of type 'int'
+ extern ssize_t recvfrom (int __fd, void *__restrict __buf, size_t __n,
+                ^~~~~~~~
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/stream_control.o src/stream_control.c
+src/stream_control.c: In function 'get_pkts_drop_spkt_limit':
+src/stream_control.c:1273:12: warning: left shift count >= width of type [-Wshift-count-overflow]
+  return (d2<<32)|d1;
+            ^~
+src/stream_control.c: In function 'get_pkts_drop_spkt_locked_limit':
+src/stream_control.c:1281:12: warning: left shift count >= width of type [-Wshift-count-overflow]
+  return (d2<<32)|d1;
+            ^~
+src/stream_control.c: In function 'get_pkts_adrop_spkt_limit':
+src/stream_control.c:1289:12: warning: left shift count >= width of type [-Wshift-count-overflow]
+  return (d2<<32)|d1;
+            ^~
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/volume_control.o src/volume_control.c
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/filter_control.o src/filter_control.c
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/ui_control.o src/ui_control.c
+src/ui_control.c: In function 'net_to_axi_mq_writer':
+src/ui_control.c:417:24: warning: passing argument 1 of 'udp_client_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+    n = udp_client_recv(buffer, UDP_PKT_SIZE);
+                        ^~~~~~
+In file included from src/include/ui_control.h:28:0,
+                 from src/ui_control.c:27:
+src/include/udpclient.h:38:5: note: expected 'unsigned int *' but argument is of type 'char *'
+ int udp_client_recv(unsigned *buffer,int buffer_size );
+     ^~~~~~~~~~~~~~~
+src/ui_control.c: In function 'ui_input_reader':
+src/ui_control.c:463:3: warning: implicit declaration of function 'oled_clear' [-Wimplicit-function-declaration]
+   oled_clear(zedboard_oled_params_0.base_address);
+   ^~~~~~~~~~
+src/ui_control.c:465:4: warning: implicit declaration of function 'oled_print_message' [-Wimplicit-function-declaration]
+    oled_print_message(&menuBuf[0], 0, zedboard_oled_params_0.base_address);
+    ^~~~~~~~~~~~~~~~~~
+src/ui_control.c:495:13: warning: implicit declaration of function 'update_leds' [-Wimplicit-function-declaration]
+             update_leds();
+             ^~~~~~~~~~~
+src/ui_control.c:786:13: warning: implicit declaration of function 'set_sync_rst'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+             set_sync_rst(time_sync_base_0);
+             ^~~~~~~~~~~~
+             set_sync_off
+src/ui_control.c:799:9: warning: implicit declaration of function 'time_sync_tx_en'; did you mean 'time_sync_mock_en'? [-Wimplicit-function-declaration]
+         time_sync_tx_en(full_udp_stack_ip_base_0);
+         ^~~~~~~~~~~~~~~
+         time_sync_mock_en
+src/ui_control.c:801:9: warning: implicit declaration of function 'time_sync_en'; did you mean 'time_tms_en'? [-Wimplicit-function-declaration]
+         time_sync_en(time_sync_base_0);
+         ^~~~~~~~~~~~
+         time_tms_en
+src/ui_control.c:1038:28: warning: implicit declaration of function 'get_pkt_seq_skiped'; did you mean 'get_pkts_dropped'? [-Wimplicit-function-declaration]
+                    int d = get_pkt_seq_skiped(eth_packet_sequencer_base_0);
+                            ^~~~~~~~~~~~~~~~~~
+                            get_pkts_dropped
+src/ui_control.c:1050:27: warning: implicit declaration of function 'set_drop_allowance' [-Wimplicit-function-declaration]
+                           set_drop_allowance(eth_to_audio_base_0, allw);//wValue(7);
+                           ^~~~~~~~~~~~~~~~~~
+src/ui_control.c:1060:20: warning: implicit declaration of function 'set_rx_esl'; did you mean 'setrpcent'? [-Wimplicit-function-declaration]
+                    set_rx_esl(eth_to_audio_base_0, allw);//wValue(7);
+                    ^~~~~~~~~~
+                    setrpcent
+src/ui_control.c:1071:26: warning: implicit declaration of function 'set_rx_osl'; did you mean 'strcoll'? [-Wimplicit-function-declaration]
+                          set_rx_osl(eth_to_audio_base_0, allw);//wValue(7);
+                          ^~~~~~~~~~
+                          strcoll
+src/ui_control.c:1183:5: warning: implicit declaration of function 'time_sync_off'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+     time_sync_off(time_sync_base_0);
+     ^~~~~~~~~~~~~
+     set_sync_off
+src/ui_control.c:1205:26: warning: implicit declaration of function 'set_sync_pkt_dly'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+                          set_sync_pkt_dly(time_sync_base_0,tmp);
+                          ^~~~~~~~~~~~~~~~
+                          set_sync_off
+src/ui_control.c:1216:6: warning: implicit declaration of function 'initiate_sync'; did you mean 'init_hw_sync'? [-Wimplicit-function-declaration]
+      initiate_sync(time_sync_base_0);
+      ^~~~~~~~~~~~~
+      init_hw_sync
+src/ui_control.c:1265:14: warning: implicit declaration of function 'get_core_version'; did you mean 'bridge_version'? [-Wimplicit-function-declaration]
+        tmp = get_core_version(eth_packet_sequencer_base_0);//in micro seconds
+              ^~~~~~~~~~~~~~~~
+              bridge_version
+src/ui_control.c:1277:8: warning: implicit declaration of function 'set_owdly_cnt' [-Wimplicit-function-declaration]
+        set_owdly_cnt(time_sync_base_0, tmp);
+        ^~~~~~~~~~~~~
+src/ui_control.c:1292:6: warning: implicit declaration of function 'time_tms_off'; did you mean 'time_tms_en'? [-Wimplicit-function-declaration]
+      time_tms_off(time_sync_base_0);
+      ^~~~~~~~~~~~
+      time_tms_en
+src/ui_control.c:1300:12: warning: implicit declaration of function 'get_tms_delay_mean'; did you mean 'get_tms_delays'? [-Wimplicit-function-declaration]
+      tmp = get_tms_delay_mean(time_sync_base_0);
+            ^~~~~~~~~~~~~~~~~~
+            get_tms_delays
+src/ui_control.c:1382:6: warning: implicit declaration of function 'print_switch_param'; did you mean 'write_switch_param'? [-Wimplicit-function-declaration]
+      print_switch_param(hyb_switch_ip_base_0);
+      ^~~~~~~~~~~~~~~~~~
+      write_switch_param
+src/ui_control.c:1891:17: warning: implicit declaration of function 'set_stream_rx_buf_slack'; did you mean 'set_stream_rx_buf_dlim'? [-Wimplicit-function-declaration]
+                 set_stream_rx_buf_slack(eth_to_audio_base_0,tmp);//in micro seconds
+                 ^~~~~~~~~~~~~~~~~~~~~~~
+                 set_stream_rx_buf_dlim
+src/ui_control.c:1901:23: warning: implicit declaration of function 'set_stream_rx_buf_docc_lim'; did you mean 'set_stream_rx_buf_dlim'? [-Wimplicit-function-declaration]
+                       set_stream_rx_buf_docc_lim(eth_to_audio_base_0,tmp);//in micro seconds
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                       set_stream_rx_buf_dlim
+src/ui_control.c:1922:16: warning: implicit declaration of function 'set_seq_replace_lock_delay'; did you mean 'set_plc_replace_delay'? [-Wimplicit-function-declaration]
+                set_seq_replace_lock_delay(eth_packet_sequencer_base_0,tmp);//in clocks
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                set_plc_replace_delay
+src/ui_control.c:1947:16: warning: implicit declaration of function 'set_stream_pkt_send_delay_enable'; did you mean 'set_stream_pkt_send_delay'? [-Wimplicit-function-declaration]
+                set_stream_pkt_send_delay_enable(eth_packet_sequencer_base_0);//in micro seconds
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                set_stream_pkt_send_delay
+src/ui_control.c:1955:14: warning: implicit declaration of function 'set_stream_pkt_send_delay_disable'; did you mean 'set_stream_pkt_send_delay'? [-Wimplicit-function-declaration]
+              set_stream_pkt_send_delay_disable(eth_packet_sequencer_base_0);//in micro seconds
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              set_stream_pkt_send_delay
+src/ui_control.c:1963:18: warning: implicit declaration of function 'set_plc_disable'; did you mean 'get_pkts_pt_disable'? [-Wimplicit-function-declaration]
+                  set_plc_disable(eth_to_audio_base_0);//in micro seconds
+                  ^~~~~~~~~~~~~~~
+                  get_pkts_pt_disable
+src/ui_control.c:1971:6: warning: implicit declaration of function 'set_plc_enable'; did you mean 'getrpcbyname'? [-Wimplicit-function-declaration]
+      set_plc_enable(eth_to_audio_base_0);//in micro seconds
+      ^~~~~~~~~~~~~~
+      getrpcbyname
+src/ui_control.c:2004:10: warning: implicit declaration of function 'get_playout_delay'; did you mean 'set_playout_delay'? [-Wimplicit-function-declaration]
+    tmp = get_playout_delay(eth_to_audio_base_0);
+          ^~~~~~~~~~~~~~~~~
+          set_playout_delay
+src/ui_control.c:2032:10: warning: implicit declaration of function 'get_sync_time'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+    tmp = get_sync_time(eth_to_audio_base_0);
+          ^~~~~~~~~~~~~
+          set_sync_off
+src/ui_control.c:2046:10: warning: implicit declaration of function 'get_all_eth2audio' [-Wimplicit-function-declaration]
+          get_all_eth2audio(eth_to_audio_base_0);
+          ^~~~~~~~~~~~~~~~~
+src/ui_control.c:2058:17: warning: implicit declaration of function 'get_rx_time_code'; did you mean 'set_xtest_mode'? [-Wimplicit-function-declaration]
+          tmp =  get_rx_time_code(eth_to_audio_base_0);
+                 ^~~~~~~~~~~~~~~~
+                 set_xtest_mode
+src/ui_control.c:2072:12: warning: implicit declaration of function 'get_rx_time_code_eff'; did you mean 'set_xtest_mode_off'? [-Wimplicit-function-declaration]
+     tmp =  get_rx_time_code_eff(eth_to_audio_base_0);
+            ^~~~~~~~~~~~~~~~~~~~
+            set_xtest_mode_off
+src/ui_control.c:2086:11: warning: implicit declaration of function 'get_rx_time_code_occ'; did you mean 'set_xtest_mode_off'? [-Wimplicit-function-declaration]
+    tmp =  get_rx_time_code_occ(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~~~~~~~
+           set_xtest_mode_off
+src/ui_control.c:2119:11: warning: implicit declaration of function 'get_dac_ofifo_occ'; did you mean 'reset_dac_fifos'? [-Wimplicit-function-declaration]
+     tmp = get_dac_ofifo_occ(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~~~~
+           reset_dac_fifos
+src/ui_control.c:2121:11: warning: implicit declaration of function 'get_dac_efifo_occ'; did you mean 'reset_dac_fifos'? [-Wimplicit-function-declaration]
+     tmp = get_dac_efifo_occ(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~~~~
+           reset_dac_fifos
+src/ui_control.c:2123:11: warning: implicit declaration of function 'get_dac_dump_pkts'; did you mean 'set_mac_ip_net'? [-Wimplicit-function-declaration]
+     tmp = get_dac_dump_pkts(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~~~~
+           set_mac_ip_net
+src/ui_control.c:2129:9: warning: implicit declaration of function 'get_dpkt_replace_events'; did you mean 'get_pkts_replaced'? [-Wimplicit-function-declaration]
+   tmp = get_dpkt_replace_events(eth_to_audio_base_0);
+         ^~~~~~~~~~~~~~~~~~~~~~~
+         get_pkts_replaced
+src/ui_control.c:2171:11: warning: implicit declaration of function 'get_dac_fifo_occ'; did you mean 'reset_dac_fifos'? [-Wimplicit-function-declaration]
+     tmp = get_dac_fifo_occ(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~~~
+           reset_dac_fifos
+src/ui_control.c:2183:14: warning: implicit declaration of function 'set_buf_corr_window' [-Wimplicit-function-declaration]
+              set_buf_corr_window(eth_to_audio_base_0,tmp);
+              ^~~~~~~~~~~~~~~~~~~
+src/ui_control.c:2191:6: warning: implicit declaration of function 'clear_buf_corr'; did you mean 'clearerr'? [-Wimplicit-function-declaration]
+      clear_buf_corr(eth_to_audio_base_0);
+      ^~~~~~~~~~~~~~
+      clearerr
+src/ui_control.c:2193:14: warning: implicit declaration of function 'set_buf_corr_on'; did you mean 'set_sync_on'? [-Wimplicit-function-declaration]
+              set_buf_corr_on(eth_to_audio_base_0);
+              ^~~~~~~~~~~~~~~
+              set_sync_on
+src/ui_control.c:2222:11: warning: implicit declaration of function 'get_e2a_status'; did you mean 'get_a2e_state'? [-Wimplicit-function-declaration]
+           get_e2a_status(eth_to_audio_base_0);
+           ^~~~~~~~~~~~~~
+           get_a2e_state
+src/ui_control.c:2442:11: warning: implicit declaration of function 'get_seq_pkts_ov'; did you mean 'get_seq_pkts_tx'? [-Wimplicit-function-declaration]
+     tmp = get_seq_pkts_ov(eth_packet_sequencer_base_0);
+           ^~~~~~~~~~~~~~~
+           get_seq_pkts_tx
+src/ui_control.c: In function 'bridge_run_command':
+src/ui_control.c:5032:10: warning: implicit declaration of function 'read_eth_reg'; did you mean 'read_eth_mac'? [-Wimplicit-function-declaration]
+    reg = read_eth_reg(full_udp_stack_ip_base_0, reg);
+          ^~~~~~~~~~~~
+          read_eth_mac
+src/ui_control.c:5056:17: warning: implicit declaration of function 'read_sync_reg'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+           reg = read_sync_reg(time_sync_base_0, reg);
+                 ^~~~~~~~~~~~~
+                 set_sync_off
+src/ui_control.c:5082:12: warning: implicit declaration of function 'read_switch_reg'; did you mean 'read_eth_mac'? [-Wimplicit-function-declaration]
+      reg = read_switch_reg(hyb_switch_ip_base_0, reg);
+            ^~~~~~~~~~~~~~~
+            read_eth_mac
+src/ui_control.c: In function 'bridge_sync_cycle':
+src/ui_control.c:6568:2: warning: implicit declaration of function 'set_sync_cycle'; did you mean 'set_sync_off'? [-Wimplicit-function-declaration]
+  set_sync_cycle(time_sync_base_0);
+  ^~~~~~~~~~~~~~
+  set_sync_off
+src/ui_control.c: In function 'deinit_hw_sync':
+src/ui_control.c:6631:2: warning: implicit declaration of function 'time_sync_tx_off'; did you mean 'time_sync_mock_off'? [-Wimplicit-function-declaration]
+  time_sync_tx_off(full_udp_stack_ip_base_0);
+  ^~~~~~~~~~~~~~~~
+  time_sync_mock_off
+src/ui_control.c: In function 'bridge_get_tc_vars':
+src/ui_control.c:7043:8: warning: implicit declaration of function 'get_rx_time_code_fout'; did you mean 'set_xtest_mode_off'? [-Wimplicit-function-declaration]
+  tmp = get_rx_time_code_fout(eth_to_audio_base_0);
+        ^~~~~~~~~~~~~~~~~~~~~
+        set_xtest_mode_off
+src/ui_control.c: At top level:
+src/ui_control.c:7250:6: warning: conflicting types for 'update_leds'
+ void update_leds(){
+      ^~~~~~~~~~~
+src/ui_control.c:495:13: note: previous implicit declaration of 'update_leds' was here
+             update_leds();
+             ^~~~~~~~~~~
+src/ui_control.c: In function 'mockThreadFun':
+src/ui_control.c:7766:10: warning: 'return' with no value, in function returning non-void
+          return;
+          ^~~~~~
+src/ui_control.c:7751:7: note: declared here
+ void *mockThreadFun(void *vargs)
+       ^~~~~~~~~~~~~
+src/ui_control.c:7779:8: warning: 'return' with no value, in function returning non-void
+        return;
+        ^~~~~~
+src/ui_control.c:7751:7: note: declared here
+ void *mockThreadFun(void *vargs)
+       ^~~~~~~~~~~~~
+src/ui_control.c: In function 'write_log_point':
+src/ui_control.c:7957:2: warning: implicit declaration of function 'gettimeofday'; did you mean 'getGateway'? [-Wimplicit-function-declaration]
+  gettimeofday(&tv, NULL);
+  ^~~~~~~~~~~~
+  getGateway
+src/ui_control.c: In function 'write_log_tpx':
+src/ui_control.c:8014:6: warning: implicit declaration of function 'strptime'; did you mean 'strftime'? [-Wimplicit-function-declaration]
+  if (strptime(dtime, "%Y-%m-%dT%H:%M:%S", &tm) == NULL){
+      ^~~~~~~~
+      strftime
+src/ui_control.c:8014:48: warning: comparison between pointer and integer
+  if (strptime(dtime, "%Y-%m-%dT%H:%M:%S", &tm) == NULL){
+                                                ^~
+src/ui_control.c: In function 'ui_input_reader':
+src/ui_control.c:683:7: warning: '__builtin_memcpy' writing 20 bytes into a region of size 17 overflows the destination [-Wstringop-overflow=]
+       sprintf(&menuBuf[0], "Invalid sample rate");
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/ui_control.c: In function 'bridge_run_command':
+src/ui_control.c:3468:7: warning: '__builtin_memcpy' writing 20 bytes into a region of size 17 overflows the destination [-Wstringop-overflow=]
+       sprintf(&menuBuf[0], "Invalid sample rate");
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 -c -o src/app_main.o src/app_main.c
+src/app_main.c: In function 'main':
+src/app_main.c:141:10: warning: passing argument 1 of 'tcflush' makes integer from pointer without a cast [-Wint-conversion]
+  tcflush(tty2, TCIOFLUSH);
+          ^~~~
+In file included from src/include/ui_control.h:20:0,
+                 from src/app_main.c:17:
+/media/tools/Xilinx/SDK/2018.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include/termios.h:90:12: note: expected 'int' but argument is of type 'FILE * {aka struct _IO_FILE *}'
+ extern int tcflush (int __fd, int __queue_selector) __THROW;
+            ^~~~~~~
+src/app_main.c:149:10: warning: passing argument 1 of 'tcflush' makes integer from pointer without a cast [-Wint-conversion]
+  tcflush(tty1, TCIOFLUSH);
+          ^~~~
+In file included from src/include/ui_control.h:20:0,
+                 from src/app_main.c:17:
+/media/tools/Xilinx/SDK/2018.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include/termios.h:90:12: note: expected 'int' but argument is of type 'FILE * {aka struct _IO_FILE *}'
+ extern int tcflush (int __fd, int __queue_selector) __THROW;
+            ^~~~~~~
+arm-linux-gnueabihf-gcc -Isrc/include --std=gnu99 -O0 src/iptables.o src/network.o src/adau1761_controller.o src/zedboardOLED.o src/reg_io.o src/udpclient.o src/stream_control.o src/volume_control.o src/filter_control.o src/ui_control.o src/app_main.o -lrt -lpthread -lip4tc -o connect
+arm-linux-gnueabihf-size connect
+   text	   data	    bss	    dec	    hex	filename
+ 432228	   1848	   1576	 435652	  6a5c4	connect
+
+15:37:04 Build Finished (took 6s.429ms)
+
